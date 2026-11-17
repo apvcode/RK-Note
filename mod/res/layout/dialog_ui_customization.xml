@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eightbitlab.com.blurview.BlurView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/theme_customizer_sheet"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16.0dip"
+    android:layout_marginEnd="16.0dip"
+    android:layout_marginBottom="18.0dip"
+    android:background="@drawable/bg_personal_dialog_glass"
+    android:outlineProvider="background"
+    android:clipToOutline="true">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16.0dip"
+            android:paddingEnd="16.0dip"
+            android:paddingTop="12.0dip"
+            android:paddingBottom="18.0dip">
+
+            <View
+                android:layout_width="38.0dip"
+                android:layout_height="4.0dip"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/bg_dock_drag_handle" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12.0dip"
+                android:text="Интерфейс и отображение"
+                android:textColor="#FFFFFFFF"
+                android:textSize="18.0sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2.0dip"
+                android:layout_marginBottom="13.0dip"
+                android:text="Настройте внешний вид под себя"
+                android:textColor="#FFA0A0A8"
+                android:textSize="12.0sp" />
+
+            <TextView style="@style/Customization.SectionTitle" android:text="СИЛА БЛЮРА" />
+
+            <TextView style="@style/Customization.RowLabel" android:text="Нижняя панель" />
+            <LinearLayout style="@style/Customization.ChipRow">
+                <TextView android:tag="blur_dock_0" style="@style/Customization.Chip" android:text="Слабый" />
+                <TextView android:tag="blur_dock_1" style="@style/Customization.Chip" android:text="Средний" />
+                <TextView android:tag="blur_dock_2" style="@style/Customization.Chip" android:text="Сильный" />
+            </LinearLayout>
+
+            <TextView style="@style/Customization.RowLabel" android:text="Боковое меню" />
+            <LinearLayout style="@style/Customization.ChipRow">
+                <TextView android:tag="blur_drawer_0" style="@style/Customization.Chip" android:text="Слабый" />
+                <TextView android:tag="blur_drawer_1" style="@style/Customization.Chip" android:text="Средний" />
+                <TextView android:tag="blur_drawer_2" style="@style/Customization.Chip" android:text="Сильный" />
+            </LinearLayout>
+
+            <TextView style="@style/Customization.RowLabel" android:text="Плашка текущего урока" />
+            <LinearLayout style="@style/Customization.ChipRow">
+                <TextView android:tag="blur_lesson_0" style="@style/Customization.Chip" android:text="Слабый" />
+                <TextView android:tag="blur_lesson_1" style="@style/Customization.Chip" android:text="Средний" />
+                <TextView android:tag="blur_lesson_2" style="@style/Customization.Chip" android:text="Сильный" />
+            </LinearLayout>
+
+            <TextView style="@style/Customization.SectionTitle" android:layout_marginTop="7.0dip" android:text="ФОРМА КАРТОЧЕК" />
+            <LinearLayout style="@style/Customization.ChipRow">
+                <TextView android:tag="shape_0" style="@style/Customization.Chip" android:text="Строгая" />
+                <TextView android:tag="shape_1" style="@style/Customization.Chip" android:text="Мягкая" />
+                <TextView android:tag="shape_2" style="@style/Customization.Chip" android:text="Капсула" />
+            </LinearLayout>
+
+            <TextView style="@style/Customization.SectionTitle" android:layout_marginTop="7.0dip" android:text="РАЗМЕР ДНЕВНИКА" />
+            <LinearLayout style="@style/Customization.ChipRow">
+                <TextView android:tag="density_0" style="@style/Customization.Chip" android:text="Компактный" />
+                <TextView android:tag="density_1" style="@style/Customization.Chip" android:text="Просторный" />
+            </LinearLayout>
+
+            <TextView style="@style/Customization.SectionTitle" android:layout_marginTop="7.0dip" android:text="ВИД ОЦЕНОК" />
+            <LinearLayout style="@style/Customization.ChipRow">
+                <TextView android:tag="grade_style_0" style="@style/Customization.Chip" android:text="Квадрат" />
+                <TextView android:tag="grade_style_1" style="@style/Customization.Chip" android:text="Круг" />
+                <TextView android:tag="grade_style_2" style="@style/Customization.Chip" android:text="Плашка" />
+            </LinearLayout>
+
+            <TextView style="@style/Customization.RowLabel" android:text="Цвет оценок" />
+            <LinearLayout style="@style/Customization.ChipRow">
+                <TextView android:tag="grade_color_1" style="@style/Customization.Chip" android:text="Цветные" />
+                <TextView android:tag="grade_color_0" style="@style/Customization.Chip" android:text="Однотонные" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="48.0dip"
+                android:layout_marginTop="11.0dip"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:tag="custom_reset"
+                    android:layout_width="0.0dip"
+                    android:layout_height="48.0dip"
+                    android:layout_weight="1.0"
+                    android:layout_marginEnd="5.0dip"
+                    android:gravity="center"
+                    android:background="@drawable/bg_dock_btn_secondary"
+                    android:text="Сбросить"
+                    android:textColor="#FFD0D0D8"
+                    android:textSize="13.0sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:clickable="true" />
+
+                <TextView
+                    android:tag="custom_save"
+                    android:layout_width="0.0dip"
+                    android:layout_height="48.0dip"
+                    android:layout_weight="1.45"
+                    android:layout_marginStart="5.0dip"
+                    android:gravity="center"
+                    android:background="@drawable/bg_dock_btn_primary"
+                    android:text="Сохранить"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="13.0sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium"
+                    android:clickable="true" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</eightbitlab.com.blurview.BlurView>

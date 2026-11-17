@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Тонкая полупрозрачная рамка стекла (без плотной заливки) -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="28.0dip" />
+            <solid android:color="@android:color/transparent" />
+            <stroke
+                android:width="0.8dip"
+                android:color="#35FFFFFF" />
+        </shape>
+    </item>
+
+    <!-- Верхний блик (отражение света) -->
+    <item
+        android:top="0.8dip"
+        android:left="0.8dip"
+        android:right="0.8dip"
+        android:bottom="34.0dip">
+        <shape android:shape="rectangle">
+            <corners
+                android:topLeftRadius="27.0dip"
+                android:topRightRadius="27.0dip"
+                android:bottomLeftRadius="0.0dip"
+                android:bottomRightRadius="0.0dip" />
+            <gradient
+                android:startColor="#25FFFFFF"
+                android:centerColor="#0AFFFFFF"
+                android:endColor="#00FFFFFF"
+                android:angle="270" />
+        </shape>
+    </item>
+
+    <!-- Световая грань по верхнему ребру -->
+    <item
+        android:top="0.0dip"
+        android:left="24.0dip"
+        android:right="24.0dip"
+        android:bottom="62.0dip">
+        <shape android:shape="rectangle">
+            <corners android:radius="1.0dip" />
+            <gradient
+                android:startColor="#00FFFFFF"
+                android:centerColor="#60FFFFFF"
+                android:endColor="#00FFFFFF"
+                android:angle="0" />
+        </shape>
+    </item>
+</layer-list>

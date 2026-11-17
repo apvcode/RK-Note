@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eightbitlab.com.blurview.BlurView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/theme_customizer_sheet"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="20dp"
+    android:background="@drawable/bg_personal_dialog_glass"
+    android:outlineProvider="background"
+    android:clipToOutline="true">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="18.0dip"
+        android:paddingTop="12.0dip"
+        android:paddingEnd="18.0dip"
+        android:paddingBottom="20.0dip">
+
+        <View
+            android:layout_width="38.0dip"
+            android:layout_height="4.0dip"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/bg_dock_drag_handle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="14.0dip"
+            android:text="Расписание звонков"
+            android:textColor="#FFFFFFFF"
+            android:textSize="19.0sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4.0dip"
+            android:layout_marginBottom="16.0dip"
+            android:text="Реальные времена звонков: профиль, день и классный час"
+            android:textColor="#B8FFFFFF"
+            android:textSize="12.0sp" />
+
+        <TextView
+            android:id="@id/dock_chip_diary"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="9.0dip"
+            android:background="@drawable/bg_schedule_action_card"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:minHeight="62.0dip"
+            android:paddingStart="18.0dip"
+            android:paddingEnd="18.0dip"
+            android:text="📅  Профили по дням недели\n     Назначьте 45, 40 или 35 минут"
+            android:textColor="#FFFFFFFF"
+            android:textSize="15.0sp"
+            android:lineSpacingExtra="2.0dip" />
+
+        <TextView
+            android:id="@id/dock_chip_finalmarks"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="9.0dip"
+            android:background="@drawable/bg_schedule_action_card"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:minHeight="62.0dip"
+            android:paddingStart="18.0dip"
+            android:paddingEnd="18.0dip"
+            android:text="⏱  Поправить текущий звонок\n     Урок или перемена и сколько минут осталось"
+            android:textColor="#FFFFFFFF"
+            android:textSize="15.0sp"
+            android:lineSpacingExtra="2.0dip" />
+
+        <TextView
+            android:id="@id/dock_chip_marks"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="9.0dip"
+            android:background="@drawable/bg_schedule_action_card"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:minHeight="62.0dip"
+            android:paddingStart="18.0dip"
+            android:paddingEnd="18.0dip"
+            android:text="⚡  Профиль только на сегодня\n     Важнее расписания по дням недели"
+            android:textColor="#FFFFFFFF"
+            android:textSize="15.0sp"
+            android:lineSpacingExtra="2.0dip" />
+
+        <TextView
+            android:id="@id/dock_chip_schedule"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="9.0dip"
+            android:background="@drawable/bg_schedule_action_card"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:minHeight="62.0dip"
+            android:paddingStart="18.0dip"
+            android:paddingEnd="18.0dip"
+            android:text="🏫  Классный час\n     Отдельное событие, не сдвигает уроки"
+            android:textColor="#FFFFFFFF"
+            android:textSize="15.0sp"
+            android:lineSpacingExtra="2.0dip" />
+
+        <TextView
+            android:id="@id/dock_chip_updates"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_schedule_action_card"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:minHeight="62.0dip"
+            android:paddingStart="18.0dip"
+            android:paddingEnd="18.0dip"
+            android:text="↺  Отключить старые настройки\n     Не влияет на времена звонков"
+            android:textColor="#FFFFC2C9"
+            android:textSize="15.0sp"
+            android:lineSpacingExtra="2.0dip" />
+
+        <TextView
+            android:id="@id/theme_btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="44.0dip"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10.0dip"
+            android:background="@drawable/bg_dock_btn_secondary"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:minWidth="132.0dip"
+            android:paddingStart="22.0dip"
+            android:paddingEnd="22.0dip"
+            android:text="Закрыть"
+            android:textColor="#D9FFFFFF"
+            android:textSize="14.0sp" />
+    </LinearLayout>
+</eightbitlab.com.blurview.BlurView>

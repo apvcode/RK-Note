@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eightbitlab.com.blurview.BlurView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/theme_customizer_sheet"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16.0dip"
+    android:layout_marginEnd="16.0dip"
+    android:layout_marginBottom="20.0dip"
+    android:background="@drawable/bg_personal_dialog_glass"
+    android:outlineProvider="background"
+    android:clipToOutline="true"
+    android:clipChildren="true">
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="16.0dip"
+    android:paddingEnd="16.0dip"
+    android:paddingTop="12.0dip"
+    android:paddingBottom="24.0dip">
+
+    <!-- Drag Handle -->
+    <View
+        android:layout_width="38.0dip"
+        android:layout_height="4.0dip"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/bg_dock_drag_handle" />
+
+    <!-- Header layout with Title & Close -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12.0dip">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Оформление и кастомизация"
+            android:textColor="#FFFFFFFF"
+            android:textSize="17.0sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium" />
+
+        <ImageView
+            android:id="@id/theme_btn_close"
+            android:layout_width="32.0dip"
+            android:layout_height="32.0dip"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="6.0dip"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_close"
+            android:tint="#FFA0A0A8" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2.0dip"
+        android:layout_marginBottom="14.0dip"
+        android:text="Настройте тему, цвета интерфейса и иконку приложения"
+        android:textColor="#FFA0A0A8"
+        android:textSize="12.5sp"
+        android:fontFamily="sans-serif" />
+
+    <!-- SECTION 1: ТЕМА ОФОРМЛЕНИЯ -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8.0dip"
+        android:text="ТЕМА ОФОРМЛЕНИЯ"
+        android:textColor="#80FFFFFF"
+        android:textSize="11.0sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.08" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16.0dip">
+
+        <!-- 1. OLED -->
+        <FrameLayout
+            android:id="@id/theme_chip_oled"
+            android:layout_width="0.0dip"
+            android:layout_height="42.0dip"
+            android:layout_weight="1.0"
+            android:layout_marginEnd="4.0dip"
+            android:background="@drawable/bg_dock_chip_active"
+            android:clickable="true"
+            android:focusable="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="OLED"
+                android:textColor="#FFFFFFFF"
+                android:textSize="12.5sp"
+                android:fontFamily="sans-serif-medium" />
+        </FrameLayout>
+
+        <!-- 2. Dark -->
+        <FrameLayout
+            android:id="@id/theme_chip_dark"
+            android:layout_width="0.0dip"
+            android:layout_height="42.0dip"
+            android:layout_weight="1.0"
+            android:layout_marginStart="2.0dip"
+            android:layout_marginEnd="2.0dip"
+            android:background="@drawable/bg_dock_chip_inactive"
+            android:clickable="true"
+            android:focusable="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Тёмная"
+                android:textColor="#FFA0A0A8"
+                android:textSize="12.5sp"
+                android:fontFamily="sans-serif-medium" />
+        </FrameLayout>
+
+        <!-- 3. Light -->
+        <FrameLayout
+            android:id="@id/theme_chip_light"
+            android:layout_width="0.0dip"
+            android:layout_height="42.0dip"
+            android:layout_weight="1.0"
+            android:layout_marginStart="2.0dip"
+            android:layout_marginEnd="2.0dip"
+            android:background="@drawable/bg_dock_chip_inactive"
+            android:clickable="true"
+            android:focusable="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Светлая"
+                android:textColor="#FFA0A0A8"
+                android:textSize="12.5sp"
+                android:fontFamily="sans-serif-medium" />
+        </FrameLayout>
+
+        <!-- 4. Material You -->
+        <FrameLayout
+            android:id="@id/theme_chip_material"
+            android:layout_width="0.0dip"
+            android:layout_height="42.0dip"
+            android:layout_weight="1.2"
+            android:layout_marginStart="4.0dip"
+            android:background="@drawable/bg_dock_chip_inactive"
+            android:clickable="true"
+            android:focusable="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Material You"
+                android:textColor="#FFA0A0A8"
+                android:textSize="12.0sp"
+                android:fontFamily="sans-serif-medium" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- SECTION 2: АКЦЕНТНЫЙ ЦВЕТ -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8.0dip"
+        android:text="ОСНОВНОЙ АКЦЕНТНЫЙ ЦВЕТ"
+        android:textColor="#80FFFFFF"
+        android:textSize="11.0sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.08" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="16.0dip">
+
+        <!-- 1. Blue -->
+        <FrameLayout
+            android:id="@id/color_circle_blue"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_margin="3.0dip"
+            android:background="@drawable/bg_theme_color_ring"
+            android:clickable="true">
+            <View
+                android:layout_width="30.0dip"
+                android:layout_height="30.0dip"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_theme_color_swatch"
+                android:backgroundTint="#FF0A84FF" />
+        </FrameLayout>
+
+        <!-- 2. Emerald -->
+        <FrameLayout
+            android:id="@id/color_circle_emerald"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_margin="3.0dip"
+            android:background="@android:color/transparent"
+            android:clickable="true">
+            <View
+                android:layout_width="30.0dip"
+                android:layout_height="30.0dip"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_theme_color_swatch"
+                android:backgroundTint="#FF10B981" />
+        </FrameLayout>
+
+        <!-- 3. Lilac -->
+        <FrameLayout
+            android:id="@id/color_circle_violet"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_margin="3.0dip"
+            android:background="@android:color/transparent"
+            android:clickable="true">
+            <View
+                android:layout_width="30.0dip"
+                android:layout_height="30.0dip"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_theme_color_swatch"
+                android:backgroundTint="#FFC084FC" />
+        </FrameLayout>
+
+        <!-- 4. Ruby -->
+        <FrameLayout
+            android:id="@id/color_circle_ruby"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_margin="3.0dip"
+            android:background="@android:color/transparent"
+            android:clickable="true">
+            <View
+                android:layout_width="30.0dip"
+                android:layout_height="30.0dip"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_theme_color_swatch"
+                android:backgroundTint="#FFF43F5E" />
+        </FrameLayout>
+
+        <!-- 5. Amber -->
+        <FrameLayout
+            android:id="@id/color_circle_amber"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_margin="3.0dip"
+            android:background="@android:color/transparent"
+            android:clickable="true">
+            <View
+                android:layout_width="30.0dip"
+                android:layout_height="30.0dip"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_theme_color_swatch"
+                android:backgroundTint="#FFF59E0B" />
+        </FrameLayout>
+
+        <!-- 6. Pink -->
+        <FrameLayout
+            android:id="@id/color_circle_pink"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_margin="3.0dip"
+            android:background="@android:color/transparent"
+            android:clickable="true">
+            <View
+                android:layout_width="30.0dip"
+                android:layout_height="30.0dip"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_theme_color_swatch"
+                android:backgroundTint="#FFEC4899" />
+        </FrameLayout>
+
+        <!-- 7. Cyan -->
+        <FrameLayout
+            android:id="@id/color_circle_cyan"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_margin="3.0dip"
+            android:background="@android:color/transparent"
+            android:clickable="true">
+            <View
+                android:layout_width="30.0dip"
+                android:layout_height="30.0dip"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_theme_color_swatch"
+                android:backgroundTint="#FF06B6D4" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:tag="advanced_customization"
+        android:layout_width="fill_parent"
+        android:layout_height="54.0dip"
+        android:layout_marginBottom="16.0dip"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="14.0dip"
+        android:paddingEnd="12.0dip"
+        android:background="@drawable/bg_dock_btn_secondary"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+            android:layout_width="32.0dip"
+            android:layout_height="32.0dip"
+            android:gravity="center"
+            android:text="✦"
+            android:textSize="19.0sp"
+            android:textColor="#FFC084FC" />
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:layout_marginStart="8.0dip"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Интерфейс и отображение"
+                android:textColor="#FFFFFFFF"
+                android:textSize="13.5sp"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1.0dip"
+                android:text="Блюр, карточки, размер и оценки"
+                android:textColor="#8FFFFFFF"
+                android:textSize="10.5sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="›"
+            android:textColor="#FFA0A0A8"
+            android:textSize="28.0sp" />
+    </LinearLayout>
+
+    <!-- Greeting notification switch -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="54.0dip"
+        android:layout_marginBottom="16.0dip"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="14.0dip"
+        android:paddingEnd="10.0dip"
+        android:background="@drawable/bg_dock_btn_secondary">
+
+        <ImageView
+            android:layout_width="28.0dip"
+            android:layout_height="28.0dip"
+            android:src="@drawable/ic_greeting_morning"
+            android:contentDescription="@null" />
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:layout_marginStart="11.0dip"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Приветствие в дневнике"
+                android:textColor="#FFFFFFFF"
+                android:textSize="13.5sp"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1.0dip"
+                android:text="Показывать при запуске приложения"
+                android:textColor="#8FFFFFFF"
+                android:textSize="10.5sp" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@id/greetingSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:contentDescription="Приветствие в дневнике"
+            app:thumbTint="#FFFFFFFF"
+            app:trackTint="#800A84FF" />
+    </LinearLayout>
+
+    <!-- SECTION 3: ИКОНКА ПРИЛОЖЕНИЯ -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8.0dip"
+        android:text="ИКОНКА ПРИЛОЖЕНИЯ"
+        android:textColor="#80FFFFFF"
+        android:textSize="11.0sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.08" />
+
+    <HorizontalScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_marginBottom="16.0dip">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Icon 0: Классическая -->
+            <LinearLayout
+                android:id="@id/icon_card_default"
+                android:layout_width="74.0dip"
+                android:layout_height="88.0dip"
+                android:layout_marginEnd="8.0dip"
+                android:background="@drawable/bg_theme_icon_card_active"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true">
+                <ImageView
+                    android:layout_width="42.0dip"
+                    android:layout_height="42.0dip"
+                    android:src="@mipmap/ic_launcher" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4.0dip"
+                    android:text="Классика"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="10.5sp"
+                    android:fontFamily="sans-serif-medium" />
+            </LinearLayout>
+
+            <!-- Icon 1: OLED Тёмная -->
+            <LinearLayout
+                android:id="@id/icon_card_alias1"
+                android:layout_width="74.0dip"
+                android:layout_height="88.0dip"
+                android:layout_marginEnd="8.0dip"
+                android:background="@drawable/bg_theme_icon_card_inactive"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true">
+                <ImageView
+                    android:layout_width="42.0dip"
+                    android:layout_height="42.0dip"
+                    android:src="@mipmap/ic_launcher_1" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4.0dip"
+                    android:text="OLED"
+                    android:textColor="#FFA0A0A8"
+                    android:textSize="10.5sp"
+                    android:fontFamily="sans-serif-medium" />
+            </LinearLayout>
+
+            <!-- Icon 2: Неон Циан -->
+            <LinearLayout
+                android:id="@id/icon_card_alias2"
+                android:layout_width="74.0dip"
+                android:layout_height="88.0dip"
+                android:layout_marginEnd="8.0dip"
+                android:background="@drawable/bg_theme_icon_card_inactive"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true">
+                <ImageView
+                    android:layout_width="42.0dip"
+                    android:layout_height="42.0dip"
+                    android:src="@mipmap/ic_launcher_2" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4.0dip"
+                    android:text="Неон"
+                    android:textColor="#FFA0A0A8"
+                    android:textSize="10.5sp"
+                    android:fontFamily="sans-serif-medium" />
+            </LinearLayout>
+
+            <!-- Icon 3: Осенний Янтарь -->
+            <LinearLayout
+                android:id="@id/icon_card_alias3"
+                android:layout_width="74.0dip"
+                android:layout_height="88.0dip"
+                android:layout_marginEnd="8.0dip"
+                android:background="@drawable/bg_theme_icon_card_inactive"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true">
+                <ImageView
+                    android:layout_width="42.0dip"
+                    android:layout_height="42.0dip"
+                    android:src="@mipmap/ic_launcher_3" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4.0dip"
+                    android:text="Янтарь"
+                    android:textColor="#FFA0A0A8"
+                    android:textSize="10.5sp"
+                    android:fontFamily="sans-serif-medium" />
+            </LinearLayout>
+
+            <!-- Icon 4: Чёрная -->
+            <LinearLayout
+                android:id="@id/icon_card_alias4"
+                android:layout_width="74.0dip"
+                android:layout_height="88.0dip"
+                android:layout_marginEnd="8.0dip"
+                android:background="@drawable/bg_theme_icon_card_inactive"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true">
+                <ImageView
+                    android:layout_width="42.0dip"
+                    android:layout_height="42.0dip"
+                    android:src="@mipmap/ic_launcher_4" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4.0dip"
+                    android:text="Чёрная"
+                    android:textColor="#FFA0A0A8"
+                    android:textSize="10.5sp"
+                    android:fontFamily="sans-serif-medium" />
+            </LinearLayout>
+
+            <!-- Icon 8: Фиолет -->
+            <LinearLayout
+                android:id="@id/icon_card_alias8"
+                android:layout_width="74.0dip"
+                android:layout_height="88.0dip"
+                android:layout_marginEnd="8.0dip"
+                android:background="@drawable/bg_theme_icon_card_inactive"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true">
+                <ImageView
+                    android:layout_width="42.0dip"
+                    android:layout_height="42.0dip"
+                    android:src="@mipmap/ic_launcher_8" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4.0dip"
+                    android:text="Фиолет"
+                    android:textColor="#FFA0A0A8"
+                    android:textSize="10.5sp"
+                    android:fontFamily="sans-serif-medium" />
+            </LinearLayout>
+
+            <!-- Icon 5: Изумруд -->
+            <LinearLayout
+                android:id="@id/icon_card_alias5"
+                android:layout_width="74.0dip"
+                android:layout_height="88.0dip"
+                android:layout_marginEnd="8.0dip"
+                android:background="@drawable/bg_theme_icon_card_inactive"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true">
+                <ImageView
+                    android:layout_width="42.0dip"
+                    android:layout_height="42.0dip"
+                    android:src="@drawable/ic_launcher_5" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4.0dip"
+                    android:text="Изумруд"
+                    android:textColor="#FFA0A0A8"
+                    android:textSize="10.5sp"
+                    android:fontFamily="sans-serif-medium" />
+            </LinearLayout>
+
+            <!-- Icon 6: Рубин -->
+            <LinearLayout
+                android:id="@id/icon_card_alias6"
+                android:layout_width="74.0dip"
+                android:layout_height="88.0dip"
+                android:layout_marginEnd="8.0dip"
+                android:background="@drawable/bg_theme_icon_card_inactive"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true">
+                <ImageView
+                    android:layout_width="42.0dip"
+                    android:layout_height="42.0dip"
+                    android:src="@drawable/ic_launcher_6" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4.0dip"
+                    android:text="Рубин"
+                    android:textColor="#FFA0A0A8"
+                    android:textSize="10.5sp"
+                    android:fontFamily="sans-serif-medium" />
+            </LinearLayout>
+
+            <!-- Icon 7: Золото -->
+            <LinearLayout
+                android:id="@id/icon_card_alias7"
+                android:layout_width="74.0dip"
+                android:layout_height="88.0dip"
+                android:background="@drawable/bg_theme_icon_card_inactive"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true">
+                <ImageView
+                    android:layout_width="42.0dip"
+                    android:layout_height="42.0dip"
+                    android:src="@drawable/ic_launcher_7" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4.0dip"
+                    android:text="Золото"
+                    android:textColor="#FFA0A0A8"
+                    android:textSize="10.5sp"
+                    android:fontFamily="sans-serif-medium" />
+            </LinearLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- SECTION 4: ПЕРЕХОД К НАСТРОЙКЕ ДОКА -->
+    <FrameLayout
+        android:id="@id/theme_btn_dock_customize"
+        android:layout_width="fill_parent"
+        android:layout_height="46.0dip"
+        android:layout_marginBottom="16.0dip"
+        android:background="@drawable/bg_dock_btn_secondary"
+        android:clickable="true"
+        android:focusable="true">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <ImageView
+                android:layout_width="20.0dip"
+                android:layout_height="20.0dip"
+                android:src="@drawable/ic_grid"
+                android:tint="#FFA0A0A8" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8.0dip"
+                android:text="Настроить кнопки нижней панели"
+                android:textColor="#FFFFFFFF"
+                android:textSize="13.5sp"
+                android:fontFamily="sans-serif-medium" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- ACTION BUTTONS -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@id/theme_btn_reset"
+            android:layout_width="0.0dip"
+            android:layout_height="46.0dip"
+            android:layout_weight="1.0"
+            android:layout_marginEnd="8.0dip"
+            android:background="@drawable/bg_dock_btn_secondary"
+            android:gravity="center"
+            android:text="По умолчанию"
+            android:textColor="#FFA0A0A8"
+            android:textSize="13.5sp"
+            android:fontFamily="sans-serif-medium"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <TextView
+            android:id="@id/theme_btn_save"
+            android:layout_width="0.0dip"
+            android:layout_height="46.0dip"
+            android:layout_weight="1.3"
+            android:background="@drawable/bg_dock_btn_primary"
+            android:gravity="center"
+            android:text="Применить"
+            android:textColor="#FFFFFFFF"
+            android:textSize="14.0sp"
+            android:fontFamily="sans-serif-medium"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+</LinearLayout>
+</eightbitlab.com.blurview.BlurView>

@@ -1,0 +1,48 @@
+# Base application and decoded output
+decoded/
+original/
+*.apk
+*.apks
+*.aab
+*.dex
+*.arsc
+*.idsig
+
+# Build and temporary output
+build/
+scratch/
+out/
+*.tmp
+*.log
+*.bak
+
+# Signing material
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.key
+keystore.properties
+release.properties
+
+# Local secrets and configuration
+.env
+.env.*
+local.properties
+secrets.properties
+
+# Downloaded tools
+tools/*.jar
+tools/platform-tools/
+
+# Editors and operating systems
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+
+
+# Python tool caches
+__pycache__/
+*.pyc
