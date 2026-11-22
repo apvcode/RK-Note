@@ -2,7 +2,7 @@
 set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 WORKSPACE="${RK_WORKSPACE:-$(dirname "$ROOT")}"
-JAVA_DIR="${RK_JAVA_DIR:-/home/mega/Applications/android-studio/jbr/bin}"
+JAVA_DIR="${RK_JAVA_DIR:-/usr/lib/jvm/java-21-openjdk/bin}"
 OUT="$WORKSPACE/build/schedule/test"
 JSON_JAR="${RK_JSON_JAR:-$WORKSPACE/build/schedule/test-libs/json.jar}"
 if [[ ! -f "$JSON_JAR" ]]; then

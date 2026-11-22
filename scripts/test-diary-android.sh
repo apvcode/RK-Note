@@ -3,7 +3,7 @@
 set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 WORKSPACE="${RK_WORKSPACE:-$(dirname "$ROOT")}"
-JAVA_DIR="${RK_JAVA_DIR:-/home/mega/Applications/android-studio/jbr/bin}"
+JAVA_DIR="${RK_JAVA_DIR:-/usr/lib/jvm/java-21-openjdk/bin}"
 SDK="${ANDROID_SDK_ROOT:-/home/mega/Android/Sdk}"
 ANDROID_JAR="${RK_ANDROID_JAR:-$SDK/platforms/android-37.0/android.jar}"
 BUILD_TOOLS="${RK_BUILD_TOOLS:-$SDK/build-tools/36.0.0}"

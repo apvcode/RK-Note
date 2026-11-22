@@ -1,0 +1,7 @@
+package android.os;
+/** Host-test surface: runs posted work at once; never packaged into the APK. */
+public class Handler {
+    public Handler(Looper looper) {}
+    public boolean post(Runnable r) { r.run(); return true; }
+    public boolean postDelayed(Runnable r, long ms) { r.run(); return true; }
+}

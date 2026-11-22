@@ -40,7 +40,7 @@ for path in (root/'smali_classes3/rk').rglob('*.smali'):
     methods[cls]={line.split()[-1] for line in source.splitlines() if line.startswith('.method ')}
     parent=re.search(r'^\.super (L[^;]+;)',source,re.M);parents[cls]=parent.group(1) if parent else None
 android_jar=os.environ.get('RK_ANDROID_JAR','/home/mega/Android/Sdk/platforms/android-37.0/android.jar')
-javap=os.environ.get('RK_JAVAP','/home/mega/Applications/android-studio/jbr/bin/javap')
+javap=os.environ.get('RK_JAVAP','/usr/lib/jvm/java-21-openjdk/bin/javap')
 def inherited(cls,signature,seen=None):
     seen=set() if seen is None else seen
     if cls is None or cls in seen:return False

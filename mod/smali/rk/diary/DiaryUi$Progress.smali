@@ -28,10 +28,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .registers 3
 
-    .line 80
+    .line 85
     invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 79
+    .line 84
     new-instance p1, Landroid/graphics/Paint;
 
     const/4 v0, 0x1
@@ -40,7 +40,7 @@
 
     iput-object p1, p0, Lrk/diary/DiaryUi$Progress;->paint:Landroid/graphics/Paint;
 
-    .line 80
+    .line 85
     const/4 p1, 0x4
 
     invoke-virtual {p0, p1}, Lrk/diary/DiaryUi$Progress;->setVisibility(I)V
@@ -63,7 +63,7 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .registers 22
 
-    .line 82
+    .line 87
     move-object/from16 v0, p0
 
     invoke-super/range {p0 .. p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
@@ -87,13 +87,13 @@
 
     const/high16 v2, 0x41400000    # 12.0f
 
-    invoke-static {v1, v2}, Lrk/diary/DiaryUi;->access$100(Landroid/content/Context;F)I
+    invoke-static {v1, v2}, Lrk/diary/DiaryUi;->access$200(Landroid/content/Context;F)I
 
     move-result v3
 
     int-to-float v5, v3
 
-    invoke-static {v1, v2}, Lrk/diary/DiaryUi;->access$100(Landroid/content/Context;F)I
+    invoke-static {v1, v2}, Lrk/diary/DiaryUi;->access$200(Landroid/content/Context;F)I
 
     move-result v2
 
@@ -105,7 +105,7 @@
 
     const/high16 v3, 0x41200000    # 10.0f
 
-    invoke-static {v1, v3}, Lrk/diary/DiaryUi;->access$100(Landroid/content/Context;F)I
+    invoke-static {v1, v3}, Lrk/diary/DiaryUi;->access$200(Landroid/content/Context;F)I
 
     move-result v3
 
@@ -115,7 +115,7 @@
 
     const/high16 v2, 0x40000000    # 2.0f
 
-    invoke-static {v1, v2}, Lrk/diary/DiaryUi;->access$100(Landroid/content/Context;F)I
+    invoke-static {v1, v2}, Lrk/diary/DiaryUi;->access$200(Landroid/content/Context;F)I
 
     move-result v3
 
@@ -125,13 +125,13 @@
 
     const/high16 v3, 0x3f800000    # 1.0f
 
-    invoke-static {v1, v3}, Lrk/diary/DiaryUi;->access$100(Landroid/content/Context;F)I
+    invoke-static {v1, v3}, Lrk/diary/DiaryUi;->access$200(Landroid/content/Context;F)I
 
     move-result v4
 
     int-to-float v9, v4
 
-    invoke-static {v1, v3}, Lrk/diary/DiaryUi;->access$100(Landroid/content/Context;F)I
+    invoke-static {v1, v3}, Lrk/diary/DiaryUi;->access$200(Landroid/content/Context;F)I
 
     move-result v4
 
@@ -145,7 +145,7 @@
 
     const/high16 v4, 0x42500000    # 52.0f
 
-    invoke-static {v1, v4}, Lrk/diary/DiaryUi;->access$100(Landroid/content/Context;F)I
+    invoke-static {v1, v4}, Lrk/diary/DiaryUi;->access$200(Landroid/content/Context;F)I
 
     move-result v4
 
@@ -157,7 +157,7 @@
 
     const/high16 v5, 0x41800000    # 16.0f
 
-    invoke-static {v1, v5}, Lrk/diary/DiaryUi;->access$100(Landroid/content/Context;F)I
+    invoke-static {v1, v5}, Lrk/diary/DiaryUi;->access$200(Landroid/content/Context;F)I
 
     move-result v5
 
@@ -171,7 +171,7 @@
 
     const/high16 v5, 0x40400000    # 3.0f
 
-    invoke-static {v1, v5}, Lrk/diary/DiaryUi;->access$100(Landroid/content/Context;F)I
+    invoke-static {v1, v5}, Lrk/diary/DiaryUi;->access$200(Landroid/content/Context;F)I
 
     move-result v5
 
@@ -193,7 +193,7 @@
 
     invoke-virtual {v4, v5}, Landroid/graphics/Paint;->setColor(I)V
 
-    invoke-static {v1, v2}, Lrk/diary/DiaryUi;->access$100(Landroid/content/Context;F)I
+    invoke-static {v1, v2}, Lrk/diary/DiaryUi;->access$200(Landroid/content/Context;F)I
 
     move-result v4
 
@@ -201,13 +201,13 @@
 
     add-float v16, v14, v4
 
-    invoke-static {v1, v3}, Lrk/diary/DiaryUi;->access$100(Landroid/content/Context;F)I
+    invoke-static {v1, v3}, Lrk/diary/DiaryUi;->access$200(Landroid/content/Context;F)I
 
     move-result v4
 
     int-to-float v4, v4
 
-    invoke-static {v1, v3}, Lrk/diary/DiaryUi;->access$100(Landroid/content/Context;F)I
+    invoke-static {v1, v3}, Lrk/diary/DiaryUi;->access$200(Landroid/content/Context;F)I
 
     move-result v5
 
@@ -239,7 +239,7 @@
 
     add-float/2addr v15, v13
 
-    invoke-static {v1, v2}, Lrk/diary/DiaryUi;->access$100(Landroid/content/Context;F)I
+    invoke-static {v1, v2}, Lrk/diary/DiaryUi;->access$200(Landroid/content/Context;F)I
 
     move-result v2
 
@@ -247,13 +247,13 @@
 
     add-float v16, v14, v2
 
-    invoke-static {v1, v3}, Lrk/diary/DiaryUi;->access$100(Landroid/content/Context;F)I
+    invoke-static {v1, v3}, Lrk/diary/DiaryUi;->access$200(Landroid/content/Context;F)I
 
     move-result v2
 
     int-to-float v2, v2
 
-    invoke-static {v1, v3}, Lrk/diary/DiaryUi;->access$100(Landroid/content/Context;F)I
+    invoke-static {v1, v3}, Lrk/diary/DiaryUi;->access$200(Landroid/content/Context;F)I
 
     move-result v1
 
@@ -275,7 +275,7 @@
 .method set(ZFI)V
     .registers 8
 
-    .line 81
+    .line 86
     iget-boolean v0, p0, Lrk/diary/DiaryUi$Progress;->active:Z
 
     const/4 v1, 0x0

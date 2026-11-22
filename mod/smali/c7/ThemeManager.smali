@@ -1206,6 +1206,9 @@
     invoke-virtual {v1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     :cond_advanced_done
+
+    invoke-static {v0, p0}, Lrk/mcp/McpSettings;->bind(Landroid/app/Dialog;Landroid/app/Activity;)V
+
     invoke-static {v0}, Lc7/ThemeManager;->refreshDialogVisuals(Landroid/app/Dialog;)V
 
     invoke-virtual {v0}, Landroid/app/Dialog;->show()V

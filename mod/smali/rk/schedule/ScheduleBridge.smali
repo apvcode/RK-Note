@@ -156,7 +156,7 @@
 
     sput-object v0, Lrk/schedule/ScheduleBridge;->callbacks:Ljava/util/Map;
 
-    .line 56
+    .line 58
     new-instance v0, Ljava/util/WeakHashMap;
 
     invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
@@ -167,22 +167,22 @@
 
     sput-object v0, Lrk/schedule/ScheduleBridge;->presenters:Ljava/util/Map;
 
-    .line 57
+    .line 59
     new-instance v0, Ljava/util/WeakHashMap;
 
     invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
 
     sput-object v0, Lrk/schedule/ScheduleBridge;->rows:Ljava/util/Map;
 
-    .line 58
+    .line 60
     const-string v0, ""
 
     sput-object v0, Lrk/schedule/ScheduleBridge;->lastActive:Ljava/lang/String;
 
-    .line 60
+    .line 62
     sput-object v0, Lrk/schedule/ScheduleBridge;->lastProblem:Ljava/lang/String;
 
-    .line 62
+    .line 64
     invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
 
     move-result-object v0
@@ -222,7 +222,7 @@
 .method public static accountChanged(Ljava/lang/Object;)V
     .registers 8
 
-    .line 33
+    .line 35
     sget-object v0, Lrk/schedule/ScheduleBridge;->owners:Lrk/schedule/DiaryContext;
 
     monitor-enter v0
@@ -344,7 +344,7 @@
 .method public static attach(Landroid/view/View;)V
     .registers 2
 
-    .line 68
+    .line 70
     if-nez p0, :cond_3
 
     return-void
@@ -374,7 +374,7 @@
 .method public static authChanging(Ljava/lang/Object;)V
     .registers 1
 
-    .line 34
+    .line 36
     if-nez p0, :cond_6
 
     const/4 p0, 0x0
@@ -388,12 +388,12 @@
 .method public static beginRequest(Ljava/lang/Object;)V
     .registers 5
 
-    .line 42
+    .line 44
     sget-object v0, Lrk/schedule/ScheduleBridge;->owners:Lrk/schedule/DiaryContext;
 
     monitor-enter v0
 
-    .line 43
+    .line 45
     :try_start_3
     sget-object v1, Lrk/schedule/ScheduleBridge;->session:Ljava/lang/Object;
 
@@ -405,7 +405,7 @@
     :try_end_c
     .catchall {:try_start_3 .. :try_end_c} :catchall_40
 
-    .line 44
+    .line 46
     :cond_c
     :try_start_c
     const-string v1, "e"
@@ -447,7 +447,7 @@
 
     invoke-static {v2, v1}, Lrk/schedule/ScheduleBridge;->log(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 45
+    .line 47
     :goto_2e
     sget-object v1, Lrk/schedule/ScheduleBridge;->launching:Ljava/lang/ThreadLocal;
 
@@ -463,7 +463,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
 
-    .line 46
+    .line 48
     monitor-exit v0
 
     return-void
@@ -481,12 +481,12 @@
 .method public static bind(Landroid/widget/TextView;Landroid/widget/TextView;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .registers 11
 
-    .line 114
+    .line 118
     invoke-static {p4}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
     move-result-wide v4
 
-    .line 115
+    .line 119
     invoke-virtual {p1}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
 
     move-result-object p4
@@ -521,21 +521,21 @@
 
     invoke-static {p1, p0}, Lrk/schedule/ScheduleBridge;->paint(Landroid/widget/TextView;Lrk/schedule/ScheduleBridge$Row;)V
 
-    .line 116
+    .line 120
     new-instance p0, Lrk/schedule/ScheduleBridge$$ExternalSyntheticLambda7;
 
     invoke-direct {p0, v4, v5}, Lrk/schedule/ScheduleBridge$$ExternalSyntheticLambda7;-><init>(J)V
 
     invoke-virtual {p1, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 117
+    .line 121
     return-void
 .end method
 
 .method private static boundary(Landroid/content/Context;Ljava/lang/String;JJZ)J
     .registers 22
 
-    .line 195
+    .line 199
     :try_start_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -593,19 +593,19 @@
 
     goto :goto_38
 
-    .line 197
+    .line 201
     :catch_32
     move-exception v0
 
     goto :goto_6d
 
-    .line 195
+    .line 199
     :cond_34
     move-wide/from16 v11, p2
 
     move-wide/from16 v13, p4
 
-    .line 196
+    .line 200
     :goto_38
     invoke-static {p0}, Lrk/schedule/ScheduleBridge;->store(Landroid/content/Context;)Lrk/schedule/ScheduleStore;
 
@@ -662,7 +662,7 @@
 
     return-wide v0
 
-    .line 197
+    .line 201
     :cond_67
     goto :goto_75
 
@@ -706,7 +706,7 @@
         }
     .end annotation
 
-    .line 72
+    .line 74
     sget-object v0, Lrk/schedule/ScheduleBridge;->owners:Lrk/schedule/DiaryContext;
 
     monitor-enter v0
@@ -767,14 +767,14 @@
         }
     .end annotation
 
-    .line 74
+    .line 76
     const-string v1, "e"
 
     if-nez p0, :cond_5
 
     return-void
 
-    .line 75
+    .line 77
     :cond_5
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -791,7 +791,7 @@
 
     move-result-object v0
 
-    .line 76
+    .line 78
     :try_start_13
     const-string v2, "a"
 
@@ -811,7 +811,7 @@
 
     goto :goto_9
 
-    .line 77
+    .line 79
     :cond_24
     new-instance v3, Ljava/util/ArrayList;
 
@@ -821,7 +821,7 @@
 
     invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
 
-    .line 78
+    .line 80
     check-cast v0, Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -912,7 +912,7 @@
 
     goto :goto_34
 
-    .line 79
+    .line 81
     :cond_84
     sget-object v0, Lrk/schedule/ScheduleBridge;->owners:Lrk/schedule/DiaryContext;
 
@@ -924,7 +924,7 @@
     :try_end_8d
     .catch Ljava/lang/Exception; {:try_start_13 .. :try_end_8d} :catch_8f
 
-    .line 80
+    .line 82
     goto/16 :goto_9
 
     :catch_8f
@@ -936,7 +936,7 @@
 
     goto/16 :goto_9
 
-    .line 81
+    .line 83
     :cond_97
     return-void
 .end method
@@ -954,7 +954,7 @@
         }
     .end annotation
 
-    .line 189
+    .line 193
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -1035,7 +1035,7 @@
 
     invoke-static {v2, v0}, Lrk/schedule/ScheduleBridge;->log(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 190
+    .line 194
     :cond_49
     :goto_49
     instance-of v0, p0, Landroid/view/ViewGroup;
@@ -1063,7 +1063,7 @@
 
     goto :goto_4d
 
-    .line 191
+    .line 195
     :cond_60
     return-void
 .end method
@@ -1071,7 +1071,7 @@
 .method public static clearShift(Landroid/content/Context;)V
     .registers 3
 
-    .line 85
+    .line 89
     invoke-static {p0}, Lrk/schedule/ScheduleBridge;->store(Landroid/content/Context;)Lrk/schedule/ScheduleStore;
 
     move-result-object v0
@@ -1112,7 +1112,7 @@
 .method public static commit(Landroid/content/Context;Lrk/schedule/ScheduleStore;)V
     .registers 2
 
-    .line 158
+    .line 162
     invoke-virtual {p1}, Lrk/schedule/ScheduleStore;->copy()Lrk/schedule/ScheduleStore;
 
     move-result-object p1
@@ -1131,7 +1131,7 @@
 .method public static context()Landroid/content/Context;
     .registers 1
 
-    .line 69
+    .line 71
     sget-object v0, Lrk/schedule/ScheduleBridge;->app:Landroid/content/Context;
 
     return-object v0
@@ -1153,7 +1153,7 @@
 .method public static currentOwner(Ljava/lang/String;)Z
     .registers 2
 
-    .line 31
+    .line 33
     if-eqz p0, :cond_14
 
     invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
@@ -1186,7 +1186,7 @@
 .method public static dayType(Ljava/lang/String;Ljava/util/Date;)Ljava/lang/String;
     .registers 5
 
-    .line 91
+    .line 95
     sget-object v0, Lrk/schedule/ScheduleBridge;->app:Landroid/content/Context;
 
     if-eqz v0, :cond_20
@@ -1234,7 +1234,7 @@
         }
     .end annotation
 
-    .line 83
+    .line 85
     sget-object v0, Lrk/schedule/ScheduleBridge;->owners:Lrk/schedule/DiaryContext;
 
     invoke-virtual {v0, p0, p1}, Lrk/schedule/DiaryContext;->get(J)Ljava/util/List;
@@ -1247,14 +1247,14 @@
 .method public static displayLessons(Ljava/lang/Object;Ljava/util/Date;)Ljava/lang/Object;
     .registers 24
 
-    .line 92
+    .line 96
     move-object/from16 v1, p0
 
     sget-object v2, Lrk/schedule/ScheduleBridge;->owners:Lrk/schedule/DiaryContext;
 
     monitor-enter v2
 
-    .line 93
+    .line 97
     :try_start_5
     sget-object v0, Lrk/schedule/ScheduleBridge;->mapping:Ljava/lang/ThreadLocal;
 
@@ -1282,7 +1282,7 @@
 
     return-object v0
 
-    .line 94
+    .line 98
     :cond_1c
     sget-object v0, Lrk/schedule/ScheduleBridge;->app:Landroid/content/Context;
 
@@ -1298,7 +1298,7 @@
 
     goto/16 :goto_1d7
 
-    .line 96
+    .line 100
     :cond_28
     :try_start_28
     invoke-virtual/range {p1 .. p1}, Ljava/util/Date;->getTime()J
@@ -1309,7 +1309,7 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 97
+    .line 101
     move-object v4, v1
 
     check-cast v4, Ljava/util/List;
@@ -1373,13 +1373,13 @@
 
     goto :goto_38
 
-    .line 98
+    .line 102
     :cond_6c
     sget-object v4, Lrk/schedule/ScheduleBridge;->owners:Lrk/schedule/DiaryContext;
 
     invoke-virtual {v4, v3, v6, v7, v0}, Lrk/schedule/DiaryContext;->put(Lrk/schedule/DiaryContext$Stamp;JLjava/util/List;)V
 
-    .line 99
+    .line 103
     sget-object v4, Lrk/schedule/ScheduleBridge;->app:Landroid/content/Context;
 
     invoke-static {v4}, Lrk/schedule/ScheduleBridge;->store(Landroid/content/Context;)Lrk/schedule/ScheduleStore;
@@ -1396,7 +1396,7 @@
 
     invoke-direct {v11}, Ljava/util/ArrayList;-><init>()V
 
-    .line 100
+    .line 104
     const-string v5, "la.h"
 
     invoke-static {v5}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
@@ -1411,7 +1411,7 @@
 
     aget-object v13, v5, v12
 
-    .line 101
+    .line 105
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v14
@@ -1686,7 +1686,7 @@
     :try_start_168
     throw v0
 
-    .line 103
+    .line 107
     :cond_169
     move-object/from16 v17, v0
 
@@ -1706,7 +1706,7 @@
 
     move-result-object v0
 
-    .line 104
+    .line 108
     invoke-interface/range {v17 .. v17}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -1724,7 +1724,7 @@
 
     check-cast v2, Lrk/schedule/ScheduleResolver$Event;
 
-    .line 105
+    .line 109
     iget-object v4, v2, Lrk/schedule/ScheduleResolver$Event;->number:Ljava/lang/String;
 
     invoke-static {v4}, Lrk/schedule/ScheduleResolver;->number(Ljava/lang/String;)I
@@ -1733,7 +1733,7 @@
 
     add-int/lit8 v4, v4, -0x1
 
-    .line 106
+    .line 110
     if-eqz v0, :cond_1a6
 
     if-ltz v4, :cond_1a6
@@ -1759,7 +1759,7 @@
     :cond_1a6
     const/4 v4, 0x0
 
-    .line 107
+    .line 111
     :goto_1a7
     iget v5, v2, Lrk/schedule/ScheduleResolver$Event;->start:I
 
@@ -1779,21 +1779,21 @@
     .catch Ljava/lang/Exception; {:try_start_168 .. :try_end_1b6} :catch_1ba
     .catchall {:try_start_168 .. :try_end_1b6} :catchall_1de
 
-    .line 108
+    .line 112
     :cond_1b6
     nop
 
-    .line 109
+    .line 113
     goto :goto_17f
 
-    .line 110
+    .line 114
     :cond_1b8
     :try_start_1b8
     monitor-exit v18
 
     return-object v11
 
-    .line 111
+    .line 115
     :catch_1ba
     move-exception v0
 
@@ -1831,7 +1831,7 @@
 
     return-object v0
 
-    .line 94
+    .line 98
     :cond_1d5
     move-object/from16 v18, v2
 
@@ -1840,7 +1840,7 @@
 
     return-object p0
 
-    .line 112
+    .line 116
     :catchall_1d9
     move-exception v0
 
@@ -1862,7 +1862,7 @@
 .method public static end(Landroid/content/Context;Ljava/lang/String;JJ)J
     .registers 13
 
-    .line 193
+    .line 197
     const/4 v6, 0x1
 
     move-object v0, p0
@@ -1883,7 +1883,7 @@
 .method public static endRequest()V
     .registers 1
 
-    .line 47
+    .line 49
     sget-object v0, Lrk/schedule/ScheduleBridge;->launching:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v0}, Ljava/lang/ThreadLocal;->remove()V
@@ -1894,7 +1894,7 @@
 .method public static enterCallback(Ljava/lang/Object;)Z
     .registers 3
 
-    .line 49
+    .line 51
     sget-object v0, Lrk/schedule/ScheduleBridge;->owners:Lrk/schedule/DiaryContext;
 
     monitor-enter v0
@@ -1940,7 +1940,7 @@
         }
     .end annotation
 
-    .line 64
+    .line 66
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -1959,7 +1959,7 @@
 .method public static homeworkKey(Ljava/lang/Object;)Ljava/lang/String;
     .registers 3
 
-    .line 50
+    .line 52
     sget-object v0, Lrk/schedule/ScheduleBridge;->owners:Lrk/schedule/DiaryContext;
 
     monitor-enter v0
@@ -2010,7 +2010,7 @@
 .method public static homeworkModel(Ljava/lang/Object;Ljava/lang/Object;)V
     .registers 5
 
-    .line 51
+    .line 53
     sget-object v0, Lrk/schedule/ScheduleBridge;->owners:Lrk/schedule/DiaryContext;
 
     monitor-enter v0
@@ -2064,12 +2064,16 @@
 .method public static init(Landroid/content/Context;)V
     .registers 1
 
-    .line 67
+    .line 69
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p0
 
     sput-object p0, Lrk/schedule/ScheduleBridge;->app:Landroid/content/Context;
+
+    sget-object p0, Lrk/schedule/ScheduleBridge;->app:Landroid/content/Context;
+
+    invoke-static {p0}, Lrk/mcp/McpSettings;->resume(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -2077,7 +2081,7 @@
 .method private static invalidateOwner()V
     .registers 3
 
-    .line 37
+    .line 39
     sget-object v0, Lrk/schedule/ScheduleBridge;->presenters:Ljava/util/Map;
 
     monitor-enter v0
@@ -2097,7 +2101,7 @@
     :try_end_f
     .catchall {:try_start_3 .. :try_end_f} :catchall_43
 
-    .line 38
+    .line 40
     sget-object v0, Lrk/schedule/ScheduleBridge;->presenters:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
@@ -2116,12 +2120,12 @@
 
     sput-object v0, Lrk/schedule/ScheduleBridge;->lastActive:Ljava/lang/String;
 
-    .line 39
+    .line 41
     new-instance v0, Lrk/schedule/ScheduleBridge$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, v1}, Lrk/schedule/ScheduleBridge$$ExternalSyntheticLambda0;-><init>(Ljava/util/List;)V
 
-    .line 40
+    .line 42
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v1
@@ -2147,11 +2151,11 @@
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 41
+    .line 43
     :goto_42
     return-void
 
-    .line 37
+    .line 39
     :catchall_43
     move-exception v1
 
@@ -2166,7 +2170,7 @@
 .method static synthetic lambda$bind$1(JLandroid/view/View;)V
     .registers 3
 
-    .line 116
+    .line 120
     invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p2
@@ -2179,7 +2183,7 @@
 .method static synthetic lambda$invalidateOwner$0(Ljava/util/List;)V
     .registers 10
 
-    .line 39
+    .line 41
     const-string v0, ""
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -2433,7 +2437,7 @@
 .method static synthetic lambda$refresh$2(Lrk/schedule/DiaryContext$Stamp;ILandroid/view/View;Ljava/util/List;)V
     .registers 8
 
-    .line 181
+    .line 185
     sget-object v0, Lrk/schedule/ScheduleBridge;->owners:Lrk/schedule/DiaryContext;
 
     invoke-virtual {v0, p0}, Lrk/schedule/DiaryContext;->current(Lrk/schedule/DiaryContext$Stamp;)Z
@@ -2528,7 +2532,7 @@
 .method static synthetic lambda$refresh$3(Lrk/schedule/DiaryContext$Stamp;ILandroid/view/View;Ljava/util/List;Ljava/util/List;)V
     .registers 14
 
-    .line 179
+    .line 183
     sget-object v0, Lrk/schedule/ScheduleBridge;->owners:Lrk/schedule/DiaryContext;
 
     invoke-virtual {v0, p0}, Lrk/schedule/DiaryContext;->current(Lrk/schedule/DiaryContext$Stamp;)Z
@@ -2551,7 +2555,7 @@
 
     goto :goto_78
 
-    .line 180
+    .line 184
     :cond_15
     invoke-interface {p3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -2648,7 +2652,7 @@
 
     goto :goto_19
 
-    .line 181
+    .line 185
     :cond_6a
     if-eqz p2, :cond_74
 
@@ -2658,14 +2662,14 @@
 
     invoke-virtual {p2, p3}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
-    .line 182
+    .line 186
     :cond_74
     invoke-static {}, Lrk/schedule/ScheduleBridge;->tick()V
 
-    .line 183
+    .line 187
     return-void
 
-    .line 179
+    .line 183
     :cond_78
     :goto_78
     return-void
@@ -2674,12 +2678,12 @@
 .method static synthetic lambda$refresh$4(Ljava/util/List;Lrk/schedule/DiaryContext$Stamp;ILandroid/view/View;Ljava/util/List;)V
     .registers 16
 
-    .line 170
+    .line 174
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 171
+    .line 175
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -2697,7 +2701,7 @@
 
     check-cast v0, [Ljava/lang/Object;
 
-    .line 172
+    .line 176
     const/4 v1, 0x0
 
     :try_start_16
@@ -2741,7 +2745,7 @@
 
     move-result-object v0
 
-    .line 173
+    .line 177
     const-string v3, "h6.a"
 
     invoke-static {v3}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
@@ -2778,7 +2782,7 @@
 
     move-result-object v6
 
-    .line 174
+    .line 178
     sget-object v7, Lrk/schedule/ScheduleBridge;->owners:Lrk/schedule/DiaryContext;
 
     monitor-enter v7
@@ -2794,7 +2798,7 @@
     :try_end_68
     .catchall {:try_start_62 .. :try_end_68} :catchall_96
 
-    .line 175
+    .line 179
     :try_start_68
     sget-object v7, Lrk/schedule/ScheduleBridge;->owners:Lrk/schedule/DiaryContext;
 
@@ -2806,7 +2810,7 @@
 
     return-void
 
-    .line 176
+    .line 180
     :cond_71
     const-string v7, "invoke"
 
@@ -2844,10 +2848,10 @@
     :try_end_94
     .catch Ljava/lang/Exception; {:try_start_68 .. :try_end_94} :catch_99
 
-    .line 177
+    .line 181
     goto/16 :goto_9
 
-    .line 174
+    .line 178
     :catchall_96
     move-exception v0
 
@@ -2861,7 +2865,7 @@
     :try_end_99
     .catch Ljava/lang/Exception; {:try_start_98 .. :try_end_99} :catch_99
 
-    .line 177
+    .line 181
     :catch_99
     move-exception v0
 
@@ -2871,7 +2875,7 @@
 
     goto/16 :goto_9
 
-    .line 178
+    .line 182
     :cond_a1
     new-instance p0, Landroid/os/Handler;
 
@@ -2895,14 +2899,14 @@
 
     invoke-virtual {p0, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 184
+    .line 188
     return-void
 .end method
 
 .method static synthetic lambda$refresh$5(Lrk/schedule/DiaryContext$Stamp;)V
     .registers 11
 
-    .line 162
+    .line 166
     sget-object v0, Lrk/schedule/ScheduleBridge;->owners:Lrk/schedule/DiaryContext;
 
     invoke-virtual {v0, p0}, Lrk/schedule/DiaryContext;->current(Lrk/schedule/DiaryContext$Stamp;)Z
@@ -2913,7 +2917,7 @@
 
     return-void
 
-    .line 163
+    .line 167
     :cond_9
     sget-object v0, Lrk/schedule/ScheduleBridge;->root:Ljava/lang/ref/WeakReference;
 
@@ -2925,7 +2929,7 @@
 
     check-cast v5, Landroid/view/View;
 
-    .line 164
+    .line 168
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
@@ -2934,7 +2938,7 @@
 
     invoke-static {v5, v6}, Lrk/schedule/ScheduleBridge;->capturePositions(Landroid/view/View;Ljava/util/List;)V
 
-    .line 165
+    .line 169
     :cond_1c
     sget-object v1, Lrk/schedule/ScheduleBridge;->presenters:Ljava/util/Map;
 
@@ -2955,7 +2959,7 @@
     :try_end_2b
     .catchall {:try_start_1f .. :try_end_2b} :catchall_72
 
-    .line 166
+    .line 170
     sget v1, Lrk/schedule/ScheduleBridge;->refreshEpoch:I
 
     const/4 v2, 0x1
@@ -2970,7 +2974,7 @@
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 167
+    .line 171
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -3023,7 +3027,7 @@
 
     goto :goto_3c
 
-    .line 169
+    .line 173
     :cond_63
     sget-object v0, Lrk/schedule/ScheduleBridge;->mapperWorker:Ljava/util/concurrent/ExecutorService;
 
@@ -3035,13 +3039,13 @@
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/ExecutorService;->execute(Ljava/lang/Runnable;)V
 
-    .line 185
+    .line 189
     invoke-static {}, Lrk/schedule/ScheduleBridge;->tick()V
 
-    .line 186
+    .line 190
     return-void
 
-    .line 165
+    .line 169
     :catchall_72
     move-exception v0
 
@@ -3058,7 +3062,7 @@
 .method static synthetic lambda$reset$6(Landroid/content/Context;Landroid/content/DialogInterface;I)V
     .registers 3
 
-    .line 200
+    .line 204
     :try_start_0
     new-instance p1, Lrk/schedule/ScheduleStore;
 
@@ -3117,7 +3121,7 @@
         }
     .end annotation
 
-    .line 53
+    .line 55
     const-string v0, "c"
 
     invoke-static {p3, v0}, Lrk/schedule/ScheduleBridge;->field(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
@@ -3163,7 +3167,7 @@
 
     invoke-interface {p4, v6, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 54
+    .line 56
     move p4, v1
 
     new-instance v1, Lrk/diary/PersonalHomeworkStore$Id;
@@ -3243,7 +3247,7 @@
         }
     .end annotation
 
-    .line 82
+    .line 84
     invoke-static {p0, p1}, Lrk/schedule/ScheduleBridge;->field(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -3268,7 +3272,7 @@
 .method private static lessonTitle(Lrk/schedule/ScheduleResolver$Event;)Ljava/lang/String;
     .registers 6
 
-    .line 131
+    .line 135
     const-string v0, "\u043a\u0430\u0431. "
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3333,7 +3337,7 @@
 
     move-result-object v1
 
-    .line 132
+    .line 136
     :try_start_3b
     iget-object v2, p0, Lrk/schedule/ScheduleResolver$Event;->original:Ljava/lang/Object;
 
@@ -3450,10 +3454,53 @@
     return-object v1
 .end method
 
+.method public static loadedDays()Ljava/util/Map;
+    .registers 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/util/List<",
+            "Lrk/schedule/ScheduleResolver$Event;",
+            ">;>;"
+        }
+    .end annotation
+
+    .line 87
+    sget-object v0, Lrk/schedule/ScheduleBridge;->owners:Lrk/schedule/DiaryContext;
+
+    invoke-virtual {v0}, Lrk/schedule/DiaryContext;->owner()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_12
+
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    goto :goto_18
+
+    :cond_12
+    sget-object v0, Lrk/schedule/ScheduleBridge;->owners:Lrk/schedule/DiaryContext;
+
+    invoke-virtual {v0}, Lrk/schedule/DiaryContext;->snapshot()Ljava/util/Map;
+
+    move-result-object v0
+
+    :goto_18
+    return-object v0
+.end method
+
 .method static log(Ljava/lang/String;Ljava/lang/Throwable;)V
     .registers 3
 
-    .line 71
+    .line 73
     const-string v0, "RKSchedule"
 
     invoke-static {v0, p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
@@ -3469,7 +3516,7 @@
         }
     .end annotation
 
-    .line 65
+    .line 67
     const-string v0, "c7.LessonCountdownManager"
 
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
@@ -3492,7 +3539,7 @@
 .method public static open(Landroid/content/Context;)V
     .registers 3
 
-    .line 199
+    .line 203
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
@@ -3511,7 +3558,7 @@
 .method public static owner()Ljava/lang/String;
     .registers 2
 
-    .line 30
+    .line 32
     sget-object v0, Lrk/schedule/ScheduleBridge;->owners:Lrk/schedule/DiaryContext;
 
     monitor-enter v0
@@ -3566,7 +3613,7 @@
 .method private static paint(Landroid/widget/TextView;Lrk/schedule/ScheduleBridge$Row;)V
     .registers 10
 
-    .line 120
+    .line 124
     sget-object v0, Lrk/schedule/ScheduleBridge;->lastActive:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
@@ -3614,7 +3661,7 @@
     :cond_29
     const/4 v0, 0x0
 
-    .line 121
+    .line 125
     :goto_2a
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -3656,7 +3703,7 @@
 
     invoke-virtual {p0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 122
+    .line 126
     :cond_51
     invoke-virtual {p0}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
 
@@ -3689,7 +3736,7 @@
     :cond_6f
     const v5, -0x5f584c
 
-    .line 123
+    .line 127
     :goto_72
     iget-boolean v6, p1, Lrk/schedule/ScheduleBridge$Row;->styled:Z
 
@@ -3742,7 +3789,7 @@
 
     iput v3, p1, Lrk/schedule/ScheduleBridge$Row;->accent:I
 
-    .line 124
+    .line 128
     :cond_a3
     if-eqz v0, :cond_a7
 
@@ -3802,7 +3849,7 @@
     :goto_d5
     invoke-virtual {p0, v3}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 126
+    .line 130
     :cond_d8
     return-void
 .end method
@@ -3810,7 +3857,7 @@
 .method public static parseDate(Ljava/lang/String;)J
     .registers 3
 
-    .line 157
+    .line 161
     invoke-static {p0}, Lrk/schedule/ScheduleResolver;->date(Ljava/lang/String;)J
 
     move-result-wide v0
@@ -3821,14 +3868,14 @@
 .method public static refresh()V
     .registers 3
 
-    .line 160
+    .line 164
     sget-object v0, Lrk/schedule/ScheduleBridge;->owners:Lrk/schedule/DiaryContext;
 
     invoke-virtual {v0}, Lrk/schedule/DiaryContext;->stamp()Lrk/schedule/DiaryContext$Stamp;
 
     move-result-object v0
 
-    .line 161
+    .line 165
     new-instance v1, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -3843,14 +3890,14 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 187
+    .line 191
     return-void
 .end method
 
 .method public static requestCallback(Ljava/lang/Object;Ljava/lang/Object;)V
     .registers 6
 
-    .line 48
+    .line 50
     sget-object v0, Lrk/schedule/ScheduleBridge;->owners:Lrk/schedule/DiaryContext;
 
     monitor-enter v0
@@ -3903,7 +3950,7 @@
 .method public static requestTick()V
     .registers 2
 
-    .line 134
+    .line 138
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -3960,7 +4007,7 @@
 .method public static reset(Landroid/content/Context;)V
     .registers 4
 
-    .line 200
+    .line 204
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
     invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
@@ -4003,7 +4050,7 @@
 .method public static resetCorrection(Landroid/content/Context;)V
     .registers 3
 
-    .line 86
+    .line 90
     :try_start_0
     invoke-static {p0}, Lrk/schedule/ScheduleBridge;->clearShift(Landroid/content/Context;)V
 
@@ -4048,7 +4095,7 @@
         }
     .end annotation
 
-    .line 87
+    .line 91
     invoke-virtual {p0, p1, p2}, Lrk/schedule/ScheduleStore;->active(J)Lrk/schedule/ScheduleStore$Profile;
 
     move-result-object v0
@@ -4148,10 +4195,39 @@
     throw p0
 .end method
 
+.method public static selectedStudent()Ljava/lang/String;
+    .registers 2
+
+    .line 31
+    sget-object v0, Lrk/schedule/ScheduleBridge;->owners:Lrk/schedule/DiaryContext;
+
+    monitor-enter v0
+
+    :try_start_3
+    sget-object v1, Lrk/schedule/ScheduleBridge;->owners:Lrk/schedule/DiaryContext;
+
+    invoke-virtual {v1}, Lrk/schedule/DiaryContext;->selectedStudent()Ljava/lang/String;
+
+    move-result-object v1
+
+    monitor-exit v0
+
+    return-object v1
+
+    :catchall_b
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_d
+    .catchall {:try_start_3 .. :try_end_d} :catchall_b
+
+    throw v1
+.end method
+
 .method public static sessionObserved(Ljava/lang/Object;)V
     .registers 8
 
-    .line 32
+    .line 34
     sget-object v0, Lrk/schedule/ScheduleBridge;->owners:Lrk/schedule/DiaryContext;
 
     monitor-enter v0
@@ -4247,7 +4323,7 @@
         }
     .end annotation
 
-    .line 66
+    .line 68
     const-string v0, "c7.LessonCountdownManager"
 
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
@@ -4268,7 +4344,7 @@
 .method public static shift(Landroid/content/Context;J)I
     .registers 3
 
-    .line 84
+    .line 88
     invoke-static {p0}, Lrk/schedule/ScheduleBridge;->store(Landroid/content/Context;)Lrk/schedule/ScheduleStore;
 
     move-result-object p0
@@ -4303,7 +4379,7 @@
 .method public static skipEmpty(Ljava/lang/Object;Z)Z
     .registers 4
 
-    .line 89
+    .line 93
     if-eqz p1, :cond_34
 
     sget-object v0, Lrk/schedule/ScheduleBridge;->app:Landroid/content/Context;
@@ -4379,7 +4455,7 @@
 .method private static source(J)Ljava/lang/String;
     .registers 3
 
-    .line 118
+    .line 122
     :try_start_0
     sget-object v0, Lrk/schedule/ScheduleBridge;->app:Landroid/content/Context;
 
@@ -4406,7 +4482,7 @@
 .method public static start(Landroid/content/Context;Ljava/lang/String;JJ)J
     .registers 13
 
-    .line 192
+    .line 196
     const/4 v6, 0x0
 
     move-object v0, p0
@@ -4431,7 +4507,7 @@
 
     monitor-enter v0
 
-    .line 70
+    .line 72
     :try_start_3
     sget-object v1, Lrk/schedule/ScheduleBridge;->store:Lrk/schedule/ScheduleStore;
 
@@ -4452,7 +4528,7 @@
 
     return-object p0
 
-    .line 70
+    .line 72
     :catchall_11
     move-exception p0
 
@@ -4467,7 +4543,7 @@
 .method public static studentChanged(Ljava/lang/String;)V
     .registers 3
 
-    .line 35
+    .line 37
     sget-object v0, Lrk/schedule/ScheduleBridge;->owners:Lrk/schedule/DiaryContext;
 
     monitor-enter v0
@@ -4501,7 +4577,7 @@
 .method public static textColor(Landroid/content/Context;)I
     .registers 7
 
-    .line 128
+    .line 132
     const-string v0, "getThemeBackgroundColor"
 
     const v1, -0xefede8
@@ -4562,7 +4638,7 @@
 .method public static themeColor(Landroid/content/Context;Ljava/lang/String;I)I
     .registers 8
 
-    .line 127
+    .line 131
     :try_start_0
     const-string v0, "c7.ThemeManager"
 
@@ -4613,12 +4689,12 @@
 .method public static tick()V
     .registers 14
 
-    .line 135
+    .line 139
     sget-object v0, Lrk/schedule/ScheduleBridge;->owners:Lrk/schedule/DiaryContext;
 
     monitor-enter v0
 
-    .line 137
+    .line 141
     :try_start_3
     const-string v1, "sContainer"
 
@@ -4640,7 +4716,7 @@
 
     return-void
 
-    .line 138
+    .line 142
     :cond_f
     :try_start_f
     invoke-static {}, Lrk/schedule/ScheduleBridge;->owner()Ljava/lang/String;
@@ -4683,7 +4759,7 @@
 
     sput-object v2, Lrk/schedule/ScheduleBridge;->app:Landroid/content/Context;
 
-    .line 139
+    .line 143
     :cond_2e
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -4697,7 +4773,7 @@
 
     sput-object v6, Lrk/schedule/ScheduleBridge;->lastActive:Ljava/lang/String;
 
-    .line 140
+    .line 144
     const/4 v6, 0x0
 
     const/4 v7, 0x1
@@ -4786,7 +4862,7 @@
 
     goto/16 :goto_168
 
-    .line 142
+    .line 146
     :cond_8c
     sget-object v1, Lrk/schedule/ScheduleBridge;->app:Landroid/content/Context;
 
@@ -4798,7 +4874,7 @@
 
     move-result-object v1
 
-    .line 143
+    .line 147
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -4856,7 +4932,7 @@
 
     move-object v3, v2
 
-    .line 144
+    .line 148
     :goto_c5
     if-eqz v3, :cond_f7
 
@@ -4916,7 +4992,7 @@
 
     goto/16 :goto_168
 
-    .line 145
+    .line 149
     :cond_f7
     if-eqz v2, :cond_145
 
@@ -5007,7 +5083,7 @@
 
     goto :goto_168
 
-    .line 146
+    .line 150
     :cond_145
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
@@ -5044,7 +5120,7 @@
 
     invoke-static {v1, v2, v3}, Lrk/schedule/ScheduleBridge;->ui(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 148
+    .line 152
     :goto_168
     const-string v1, "sCurrentActiveLessonNum"
 
@@ -5052,7 +5128,7 @@
 
     invoke-static {v1, v2}, Lrk/schedule/ScheduleBridge;->setManager(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 149
+    .line 153
     new-instance v1, Ljava/util/ArrayList;
 
     sget-object v2, Lrk/schedule/ScheduleBridge;->rows:Ljava/util/Map;
@@ -5106,13 +5182,13 @@
 
     goto :goto_17e
 
-    .line 152
+    .line 156
     :catchall_1a0
     move-exception v1
 
     goto :goto_213
 
-    .line 150
+    .line 154
     :catch_1a2
     move-exception v1
 
@@ -5236,10 +5312,10 @@
     :cond_20d
     nop
 
-    .line 151
+    .line 155
     invoke-static {}, Lrk/diary/DiaryUi;->tick()V
 
-    .line 152
+    .line 156
     monitor-exit v0
 
     return-void
@@ -5284,7 +5360,7 @@
 .method private static ui(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .registers 16
 
-    .line 129
+    .line 133
     const-string v0, "\ud83d\udd14"
 
     :try_start_2
@@ -5458,7 +5534,7 @@
 .method public static validate(Lrk/schedule/ScheduleStore;)V
     .registers 7
 
-    .line 154
+    .line 158
     iget-object v0, p0, Lrk/schedule/ScheduleStore;->profiles:Ljava/util/LinkedHashMap;
 
     invoke-virtual {v0}, Ljava/util/LinkedHashMap;->values()Ljava/util/Collection;
@@ -5488,7 +5564,7 @@
 
     goto :goto_a
 
-    .line 155
+    .line 159
     :cond_1c
     sget-object v0, Lrk/schedule/ScheduleBridge;->owners:Lrk/schedule/DiaryContext;
 
@@ -5547,10 +5623,10 @@
     :cond_4e
     monitor-exit v0
 
-    .line 156
+    .line 160
     return-void
 
-    .line 155
+    .line 159
     :catchall_50
     move-exception p0
 

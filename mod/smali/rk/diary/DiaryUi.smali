@@ -93,7 +93,16 @@
     return-object p0
 .end method
 
-.method static synthetic access$100(Landroid/content/Context;F)I
+.method static synthetic access$100()Ljava/util/Map;
+    .registers 1
+
+    .line 16
+    sget-object v0, Lrk/diary/DiaryUi;->headers:Ljava/util/Map;
+
+    return-object v0
+.end method
+
+.method static synthetic access$200(Landroid/content/Context;F)I
     .registers 2
 
     .line 16
@@ -107,7 +116,7 @@
 .method private static archiveLabel(Ljava/lang/String;)Ljava/lang/String;
     .registers 5
 
-    .line 122
+    .line 127
     const-string v0, "lesson:"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -384,7 +393,7 @@
 .method private static button(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Runnable;)Landroid/widget/Button;
     .registers 6
 
-    .line 85
+    .line 90
     new-instance v0, Landroid/widget/Button;
 
     invoke-direct {v0, p0}, Landroid/widget/Button;-><init>(Landroid/content/Context;)V
@@ -626,7 +635,7 @@
 .method public static editHomework(Landroid/view/View;Ljava/lang/String;Ljava/lang/String;)V
     .registers 24
 
-    .line 91
+    .line 96
     invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v3
@@ -647,7 +656,7 @@
 
     move-result-object v4
 
-    .line 92
+    .line 97
     const/4 v1, 0x1
 
     if-eqz v6, :cond_1cc
@@ -666,13 +675,13 @@
 
     goto/16 :goto_1cd
 
-    .line 93
+    .line 98
     :cond_23
     new-instance v2, Lrk/diary/PersonalHomeworkStore;
 
     invoke-direct {v2, v3}, Lrk/diary/PersonalHomeworkStore;-><init>(Landroid/content/Context;)V
 
-    .line 94
+    .line 99
     invoke-static {}, Lrk/schedule/ScheduleBridge;->ownerStamp()Lrk/schedule/DiaryContext$Stamp;
 
     move-result-object v0
@@ -681,7 +690,7 @@
 
     move-result-object v10
 
-    .line 95
+    .line 100
     new-instance v9, Landroid/app/Dialog;
 
     invoke-direct {v9, v3}, Landroid/app/Dialog;-><init>(Landroid/content/Context;)V
@@ -692,7 +701,7 @@
 
     invoke-virtual {v9, v11}, Landroid/app/Dialog;->setCanceledOnTouchOutside(Z)V
 
-    .line 96
+    .line 101
     new-instance v12, Landroid/widget/LinearLayout;
 
     invoke-direct {v12, v3}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
@@ -723,7 +732,7 @@
 
     invoke-virtual {v12, v8, v13, v7, v14}, Landroid/widget/LinearLayout;->setPadding(IIII)V
 
-    .line 97
+    .line 102
     const-string v7, "\u041c\u043e\u0451 \u0434\u043e\u043c\u0430\u0448\u043d\u0435\u0435 \u0437\u0430\u0434\u0430\u043d\u0438\u0435"
 
     const/16 v8, 0x14
@@ -754,7 +763,7 @@
 
     invoke-virtual {v12, v7}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 98
+    .line 103
     const/4 v7, 0x1
 
     new-instance v1, Landroid/widget/EditText;
@@ -856,7 +865,7 @@
 
     invoke-virtual {v12, v1, v7}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 99
+    .line 104
     new-instance v15, Landroid/widget/LinearLayout;
 
     invoke-direct {v15, v3}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
@@ -923,7 +932,7 @@
 
     move-result-object v0
 
-    .line 104
+    .line 109
     invoke-static {v7}, Lrk/diary/DiaryUi;->accent(Landroid/content/Context;)I
 
     move-result v5
@@ -1052,15 +1061,15 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 120
+    .line 125
     invoke-virtual {v1, v15}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
     invoke-static {v10, v7, v1}, Lrk/diary/DiaryUi;->show(Landroid/app/Dialog;Landroid/content/Context;Landroid/widget/LinearLayout;)Landroid/view/View;
 
-    .line 121
+    .line 126
     return-void
 
-    .line 98
+    .line 103
     :catch_1bd
     move-exception v0
 
@@ -1080,7 +1089,7 @@
 
     return-void
 
-    .line 92
+    .line 97
     :cond_1cc
     move-object v7, v3
 
@@ -1146,7 +1155,7 @@
 .method private static label(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/TextView;
     .registers 6
 
-    .line 84
+    .line 89
     new-instance v0, Landroid/widget/TextView;
 
     invoke-direct {v0, p0}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
@@ -1215,7 +1224,7 @@
 .method static synthetic lambda$button$3(Ljava/lang/Runnable;Landroid/view/View;)V
     .registers 2
 
-    .line 85
+    .line 90
     invoke-interface {p0}, Ljava/lang/Runnable;->run()V
 
     return-void
@@ -1224,7 +1233,7 @@
 .method static synthetic lambda$editHomework$4(Landroid/widget/EditText;)V
     .registers 2
 
-    .line 99
+    .line 104
     const-string v0, ""
 
     invoke-virtual {p0, v0}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
@@ -1235,7 +1244,7 @@
 .method static synthetic lambda$editHomework$5(Landroid/widget/EditText;Lrk/schedule/DiaryContext$Stamp;Lrk/diary/PersonalHomeworkStore;Lrk/diary/PersonalHomeworkStore$Id;Landroid/view/View;Lrk/diary/DiaryUi$Header;Landroid/content/Context;Ljava/lang/String;Landroid/app/Dialog;)V
     .registers 11
 
-    .line 100
+    .line 105
     invoke-virtual {p0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
     move-result-object v0
@@ -1248,7 +1257,7 @@
 
     move-result-object v0
 
-    .line 101
+    .line 106
     invoke-static {p1}, Lrk/schedule/ScheduleBridge;->current(Lrk/schedule/DiaryContext$Stamp;)Z
 
     move-result v1
@@ -1261,14 +1270,14 @@
 
     return-void
 
-    .line 102
+    .line 107
     :cond_18
     :try_start_18
     invoke-static {p1, p2, p3, v0}, Lrk/schedule/ScheduleBridge;->saveHomework(Lrk/schedule/DiaryContext$Stamp;Lrk/diary/PersonalHomeworkStore;Lrk/diary/PersonalHomeworkStore$Id;Ljava/lang/String;)V
     :try_end_1b
     .catch Ljava/lang/Exception; {:try_start_18 .. :try_end_1b} :catch_3c
 
-    .line 103
+    .line 108
     sget-object p0, Lrk/diary/DiaryUi;->headers:Ljava/util/Map;
 
     invoke-interface {p0, p4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1300,10 +1309,10 @@
     :cond_38
     invoke-virtual {p8}, Landroid/app/Dialog;->dismiss()V
 
-    .line 104
+    .line 109
     return-void
 
-    .line 102
+    .line 107
     :catch_3c
     move-exception p1
 
@@ -1319,7 +1328,7 @@
 .method static synthetic lambda$editHomework$6(Lrk/schedule/DiaryContext$Stamp;Lrk/diary/PersonalHomeworkStore;Lrk/diary/PersonalHomeworkStore$Id;Ljava/lang/String;Landroid/widget/EditText;ZLandroid/view/View;Lrk/diary/DiaryUi$Header;Landroid/content/Context;Ljava/lang/String;Landroid/content/DialogInterface;I)V
     .registers 19
 
-    .line 116
+    .line 121
     :try_start_0
     invoke-static {p0}, Lrk/schedule/ScheduleBridge;->current(Lrk/schedule/DiaryContext$Stamp;)Z
 
@@ -1391,7 +1400,7 @@
 
     invoke-virtual {p4, p0}, Landroid/widget/EditText;->setError(Ljava/lang/CharSequence;)V
 
-    .line 117
+    .line 122
     :cond_3d
     :goto_3d
     return-void
@@ -1400,7 +1409,7 @@
 .method static synthetic lambda$editHomework$7(Ljava/util/List;Lrk/diary/PersonalHomeworkStore;Landroid/content/Context;Ljava/util/Map;Landroid/widget/EditText;Lrk/diary/PersonalHomeworkStore$Id;Ljava/lang/String;Lrk/diary/DiaryUi$Header;Lrk/schedule/DiaryContext$Stamp;Landroid/view/View;Ljava/lang/String;Landroid/content/DialogInterface;I)V
     .registers 25
 
-    .line 111
+    .line 116
     move-object/from16 v3, p5
 
     move/from16 v1, p12
@@ -1413,7 +1422,7 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 112
+    .line 117
     invoke-virtual {p1, v4}, Lrk/diary/PersonalHomeworkStore;->imported(Ljava/lang/String;)Z
 
     move-result p0
@@ -1510,7 +1519,7 @@
 
     return-void
 
-    .line 113
+    .line 118
     :cond_69
     invoke-virtual/range {p4 .. p4}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -1553,7 +1562,7 @@
     :goto_89
     const/4 v6, 0x1
 
-    .line 114
+    .line 119
     :goto_8a
     new-instance p0, Landroid/app/AlertDialog$Builder;
 
@@ -1653,7 +1662,7 @@
 
     move-result-object p0
 
-    .line 115
+    .line 120
     const-string v0, "\u041e\u0442\u043c\u0435\u043d\u0430"
 
     invoke-virtual {p0, v0, v1}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
@@ -1692,17 +1701,17 @@
 
     move-result-object p0
 
-    .line 117
+    .line 122
     invoke-virtual {p0}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
 
-    .line 118
+    .line 123
     return-void
 .end method
 
 .method static synthetic lambda$editHomework$8(Lrk/schedule/DiaryContext$Stamp;Lrk/diary/PersonalHomeworkStore;Landroid/content/Context;Landroid/widget/EditText;Lrk/diary/PersonalHomeworkStore$Id;Ljava/lang/String;Lrk/diary/DiaryUi$Header;Landroid/view/View;Ljava/lang/String;)V
     .registers 23
 
-    .line 106
+    .line 111
     move-object/from16 v3, p2
 
     :try_start_2
@@ -1712,7 +1721,7 @@
 
     if-eqz v0, :cond_bb
 
-    .line 107
+    .line 112
     invoke-virtual {p1}, Lrk/diary/PersonalHomeworkStore;->archive()Ljava/util/Map;
 
     move-result-object v4
@@ -1725,7 +1734,7 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 108
+    .line 113
     invoke-interface {v4}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v2
@@ -1821,7 +1830,7 @@
 
     goto :goto_1e
 
-    .line 109
+    .line 114
     :cond_73
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
@@ -1841,7 +1850,7 @@
 
     return-void
 
-    .line 110
+    .line 115
     :cond_84
     new-instance v2, Landroid/app/AlertDialog$Builder;
 
@@ -1891,7 +1900,7 @@
 
     const-string p1, "\u041e\u0442\u043c\u0435\u043d\u0430"
 
-    .line 118
+    .line 123
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
@@ -1900,10 +1909,10 @@
 
     invoke-virtual {p0}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
 
-    .line 119
+    .line 124
     goto :goto_ce
 
-    .line 106
+    .line 111
     :cond_bb
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -1915,7 +1924,7 @@
     :try_end_c3
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_c3} :catch_c3
 
-    .line 119
+    .line 124
     :catch_c3
     move-exception v0
 
@@ -1929,7 +1938,7 @@
 
     invoke-virtual {v5, p0}, Landroid/widget/EditText;->setError(Ljava/lang/CharSequence;)V
 
-    .line 120
+    .line 125
     :goto_ce
     return-void
 .end method
@@ -1937,7 +1946,7 @@
 .method static synthetic lambda$renderHomework$2(Landroid/view/View;Ljava/lang/String;Landroid/view/View;)V
     .registers 3
 
-    .line 56
+    .line 61
     sget-object p2, Lrk/diary/DiaryUi;->headers:Ljava/util/Map;
 
     invoke-interface {p2, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1990,10 +1999,49 @@
     return p0
 .end method
 
+.method public static noteChanged(Ljava/lang/String;)V
+    .registers 3
+
+    .line 50
+    new-instance v0, Lrk/diary/DiaryUi$1;
+
+    invoke-direct {v0, p0}, Lrk/diary/DiaryUi$1;-><init>(Ljava/lang/String;)V
+
+    .line 51
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object p0
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    if-ne p0, v1, :cond_13
+
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+
+    goto :goto_1f
+
+    :cond_13
+    new-instance p0, Landroid/os/Handler;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-direct {p0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    invoke-virtual {p0, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    .line 52
+    :goto_1f
+    return-void
+.end method
+
 .method public static renderHomework(Landroid/view/View;Landroid/content/Context;Ljava/lang/String;)V
     .registers 11
 
-    .line 49
+    .line 54
     const-string v0, "rk_personal_homework"
 
     invoke-virtual {p0, v0}, Landroid/view/View;->findViewWithTag(Ljava/lang/Object;)Landroid/view/View;
@@ -2006,7 +2054,7 @@
 
     return-void
 
-    .line 50
+    .line 55
     :cond_b
     invoke-virtual {v0}, Landroid/widget/TextView;->getParent()Landroid/view/ViewParent;
 
@@ -2051,7 +2099,7 @@
     :cond_36
     move-object v4, v2
 
-    .line 51
+    .line 56
     :goto_37
     const-string v5, "rk_diary_add_homework"
 
@@ -2087,7 +2135,7 @@
     :goto_56
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 52
+    .line 57
     :cond_59
     invoke-virtual {v4}, Ljava/lang/String;->isEmpty()Z
 
@@ -2103,7 +2151,7 @@
 
     goto/16 :goto_f3
 
-    .line 54
+    .line 59
     :cond_6a
     new-instance v2, Landroid/text/SpannableStringBuilder;
 
@@ -2175,7 +2223,7 @@
 
     invoke-virtual {v2, v3, v6, v4, v7}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
-    .line 55
+    .line 60
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     invoke-static {p1}, Lrk/diary/DiaryUi;->text(Landroid/content/Context;)I
@@ -2210,7 +2258,7 @@
 
     invoke-virtual {v1, v6}, Landroid/view/View;->setVisibility(I)V
 
-    .line 56
+    .line 61
     invoke-static {v1}, Lrk/diary/DiaryUi;->stylePersonalPanel(Landroid/view/View;)V
 
     const-string p1, "sans-serif"
@@ -2227,18 +2275,18 @@
 
     invoke-virtual {v1, p1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 58
+    .line 63
     :goto_f3
     invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
 
-    .line 59
+    .line 64
     return-void
 .end method
 
 .method private static show(Landroid/app/Dialog;Landroid/content/Context;Landroid/widget/LinearLayout;)Landroid/view/View;
     .registers 13
 
-    .line 87
+    .line 92
     new-instance v0, Landroid/widget/ScrollView;
 
     invoke-direct {v0, p1}, Landroid/widget/ScrollView;-><init>(Landroid/content/Context;)V
@@ -2267,7 +2315,7 @@
 
     invoke-virtual {v4, v0, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 88
+    .line 93
     invoke-static {p1}, Lrk/schedule/ScheduleUi;->activitySource(Landroid/content/Context;)Landroid/view/ViewGroup;
 
     move-result-object v5
@@ -2353,7 +2401,7 @@
 .method public static showMarkDetails(Landroid/view/View;Ljava/lang/CharSequence;I)V
     .registers 14
 
-    .line 136
+    .line 141
     if-eqz p0, :cond_ec
 
     if-nez p1, :cond_6
@@ -2398,7 +2446,7 @@
 
     sput-object v1, Lrk/diary/DiaryUi;->markDialog:Ljava/lang/ref/WeakReference;
 
-    .line 137
+    .line 142
     new-instance v1, Landroid/widget/LinearLayout;
 
     invoke-direct {v1, p0}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
@@ -2489,7 +2537,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 138
+    .line 143
     const-string v2, ""
 
     const/16 v3, 0xf
@@ -2574,10 +2622,10 @@
 
     invoke-static {p2, p0, v1}, Lrk/diary/DiaryUi;->show(Landroid/app/Dialog;Landroid/content/Context;Landroid/widget/LinearLayout;)Landroid/view/View;
 
-    .line 139
+    .line 144
     return-void
 
-    .line 136
+    .line 141
     :cond_ec
     :goto_ec
     return-void
@@ -2586,7 +2634,7 @@
 .method public static styleMark(Landroid/widget/TextView;I)V
     .registers 14
 
-    .line 133
+    .line 138
     if-nez p0, :cond_3
 
     return-void
@@ -2863,14 +2911,14 @@
 
     invoke-static {p0, p1}, Lrk/schedule/ScheduleUi;->press(Landroid/view/View;I)V
 
-    .line 134
+    .line 139
     return-void
 .end method
 
 .method private static stylePersonalPanel(Landroid/view/View;)V
     .registers 7
 
-    .line 61
+    .line 66
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -2883,7 +2931,7 @@
 
     move-result v2
 
-    .line 62
+    .line 67
     invoke-static {v1}, Landroid/graphics/Color;->red(I)I
 
     move-result v3
@@ -2936,7 +2984,7 @@
 
     move-result v1
 
-    .line 63
+    .line 68
     invoke-static {v0}, Lrk/diary/DiaryUi;->corners(Landroid/content/Context;)I
 
     move-result v2
@@ -2951,14 +2999,14 @@
 
     invoke-virtual {p0, v0}, Landroid/view/View;->setElevation(F)V
 
-    .line 64
+    .line 69
     return-void
 .end method
 
 .method public static styleTree(Landroid/view/View;)V
     .registers 6
 
-    .line 124
+    .line 129
     if-nez p0, :cond_3
 
     return-void
@@ -2972,7 +3020,7 @@
 
     move-result-object v1
 
-    .line 125
+    .line 130
     const-string v2, "rk_personal_homework_blur"
 
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -2983,7 +3031,7 @@
 
     invoke-static {p0}, Lrk/diary/DiaryUi;->stylePersonalPanel(Landroid/view/View;)V
 
-    .line 126
+    .line 131
     :cond_16
     const-string v2, "rk_diary_add_homework"
 
@@ -3007,7 +3055,7 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 127
+    .line 132
     :cond_2c
     const-string v2, "rk_homework_card"
 
@@ -3080,7 +3128,7 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setColorFilter(I)V
 
-    .line 128
+    .line 133
     :cond_76
     const-string v2, "rk_diary_school_label"
 
@@ -3104,7 +3152,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 129
+    .line 134
     :cond_8c
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
@@ -3180,7 +3228,7 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 130
+    .line 135
     :cond_d9
     instance-of v0, p0, Landroid/view/ViewGroup;
 
@@ -3209,7 +3257,7 @@
 
     goto :goto_de
 
-    .line 131
+    .line 136
     :cond_f1
     return-void
 .end method
@@ -3243,7 +3291,7 @@
 .method public static tick()V
     .registers 7
 
-    .line 65
+    .line 70
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -3315,7 +3363,7 @@
 .method private static update(Lrk/diary/DiaryUi$Header;J)V
     .registers 14
 
-    .line 67
+    .line 72
     iget-object v0, p0, Lrk/diary/DiaryUi$Header;->progress:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -3338,11 +3386,11 @@
 
     goto/16 :goto_8f
 
-    .line 68
+    .line 73
     :cond_16
     nop
 
-    .line 69
+    .line 74
     iget-object v2, p0, Lrk/diary/DiaryUi$Header;->owner:Ljava/lang/String;
 
     invoke-static {v2}, Lrk/schedule/ScheduleBridge;->currentOwner(Ljava/lang/String;)Z
@@ -3371,14 +3419,14 @@
 
     if-eqz v2, :cond_83
 
-    .line 70
+    .line 75
     iget-wide v5, p0, Lrk/diary/DiaryUi$Header;->day:J
 
     invoke-static {v5, v6}, Lrk/schedule/ScheduleBridge;->diary(J)Ljava/util/List;
 
     move-result-object v2
 
-    .line 71
+    .line 76
     if-eqz v2, :cond_83
 
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -3424,7 +3472,7 @@
 
     if-eqz v6, :cond_4c
 
-    .line 72
+    .line 77
     iget-wide v6, p0, Lrk/diary/DiaryUi$Header;->day:J
 
     iget v2, v5, Lrk/schedule/ScheduleResolver$Event;->start:I
@@ -3441,7 +3489,7 @@
 
     move-result-wide v9
 
-    .line 73
+    .line 78
     cmp-long p0, p1, v6
 
     if-ltz p0, :cond_7b
@@ -3465,7 +3513,7 @@
 
     div-float v4, p0, p1
 
-    .line 76
+    .line 81
     :cond_83
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -3477,10 +3525,10 @@
 
     invoke-virtual {v0, v3, v4, p0}, Lrk/diary/DiaryUi$Progress;->set(ZFI)V
 
-    .line 77
+    .line 82
     return-void
 
-    .line 67
+    .line 72
     :cond_8f
     :goto_8f
     return-void

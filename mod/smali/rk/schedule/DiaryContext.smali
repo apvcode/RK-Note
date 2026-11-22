@@ -239,7 +239,7 @@
 
     monitor-enter p0
 
-    .line 20
+    .line 21
     if-eqz p1, :cond_24
 
     :try_start_3
@@ -275,7 +275,7 @@
 
     goto :goto_25
 
-    .line 20
+    .line 21
     :catchall_21
     move-exception p1
 
@@ -285,7 +285,7 @@
 
     throw p1
 
-    .line 20
+    .line 21
     :cond_24
     const/4 p1, 0x0
 
@@ -308,7 +308,7 @@
 
     monitor-enter p0
 
-    .line 22
+    .line 23
     :try_start_1
     iget-object v0, p0, Lrk/schedule/DiaryContext;->days:Ljava/util/Map;
 
@@ -354,7 +354,7 @@
 
     return-object p2
 
-    .line 22
+    .line 23
     :catchall_23
     move-exception p1
 
@@ -371,7 +371,7 @@
 
     monitor-enter p0
 
-    .line 18
+    .line 19
     :try_start_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -423,7 +423,7 @@
 
     return-object v0
 
-    .line 18
+    .line 19
     :catchall_30
     move-exception v0
 
@@ -525,7 +525,7 @@
 
     monitor-enter p0
 
-    .line 21
+    .line 22
     :try_start_1
     invoke-virtual {p0, p1}, Lrk/schedule/DiaryContext;->current(Lrk/schedule/DiaryContext$Stamp;)Z
 
@@ -552,7 +552,7 @@
 
     return-void
 
-    .line 21
+    .line 22
     :catchall_17
     move-exception p1
 
@@ -562,6 +562,33 @@
     .catchall {:try_start_18 .. :try_end_19} :catchall_17
 
     throw p1
+.end method
+
+.method public declared-synchronized selectedStudent()Ljava/lang/String;
+    .registers 2
+
+    monitor-enter p0
+
+    .line 18
+    :try_start_1
+    iget-object v0, p0, Lrk/schedule/DiaryContext;->student:Ljava/lang/String;
+    :try_end_3
+    .catchall {:try_start_1 .. :try_end_3} :catchall_5
+
+    monitor-exit p0
+
+    return-object v0
+
+    .line 18
+    :catchall_5
+    move-exception v0
+
+    :try_start_6
+    monitor-exit p0
+    :try_end_7
+    .catchall {:try_start_6 .. :try_end_7} :catchall_5
+
+    throw v0
 .end method
 
 .method public declared-synchronized snapshot()Ljava/util/Map;
@@ -579,7 +606,7 @@
 
     monitor-enter p0
 
-    .line 23
+    .line 24
     :try_start_1
     new-instance v0, Ljava/util/HashMap;
 
@@ -593,7 +620,7 @@
 
     return-object v0
 
-    .line 23
+    .line 24
     :catchall_a
     move-exception v0
 
@@ -610,7 +637,7 @@
 
     monitor-enter p0
 
-    .line 19
+    .line 20
     :try_start_1
     new-instance v0, Lrk/schedule/DiaryContext$Stamp;
 
@@ -630,7 +657,7 @@
 
     return-object v0
 
-    .line 19
+    .line 20
     :catchall_f
     move-exception v0
 

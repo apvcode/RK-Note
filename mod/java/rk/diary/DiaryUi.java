@@ -45,6 +45,11 @@ public final class DiaryUi {
             renderHomework(root,c,state.key);update(state,System.currentTimeMillis());
         }catch(Exception e){log("Binding diary card",e);}
     }
+    /** A note was changed from outside (the assistant): the cards that show it are redrawn. */
+    public static void noteChanged(final String key){
+        Runnable redraw=new Runnable(){@Override public void run(){for(Header h:new ArrayList<>(headers.values())){View root=h.root.get();if(root!=null&&key.equals(h.key))renderHomework(root,root.getContext(),key);}}};
+        if(android.os.Looper.myLooper()==android.os.Looper.getMainLooper())redraw.run();else new android.os.Handler(android.os.Looper.getMainLooper()).post(redraw);
+    }
     public static void renderHomework(View root,Context c,String key){
         TextView note=(TextView)root.findViewWithTag("rk_personal_homework");if(note==null)return;
         View panel=(View)note.getParent();note.setText("");note.setVisibility(View.GONE);panel.setVisibility(View.GONE);PersonalHomeworkStore.Id id=PersonalHomeworkStore.Id.parse(key);String value=id!=null&&ScheduleBridge.currentOwner(id.owner)?new PersonalHomeworkStore(c).get(id):"";

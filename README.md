@@ -1,6 +1,6 @@
 # RK Note Mod
 
-**Version 1.3.0**
+**Version 1.3.1**
 
 An unofficial, educational modification of the Russian school diary app **Eljur**, created through reverse engineering of its APK. The project documents and publishes only the original parts of the mod: Smali components, Java sources of the schedule system, visual resources and the hook map.
 

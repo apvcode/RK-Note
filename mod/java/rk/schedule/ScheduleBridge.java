@@ -27,6 +27,8 @@ public final class ScheduleBridge {
     public static void saveHomework(DiaryContext.Stamp stamp,rk.diary.PersonalHomeworkStore notes,rk.diary.PersonalHomeworkStore.Id id,String value){synchronized(owners){requireOwner(stamp,id);notes.save(id,value);}}
     public static String transferHomework(DiaryContext.Stamp stamp,rk.diary.PersonalHomeworkStore notes,rk.diary.PersonalHomeworkStore.Id id,String archiveKey,String text,boolean append){synchronized(owners){requireOwner(stamp,id);return notes.transfer(id,archiveKey,text,append);}}
     private static void requireOwner(DiaryContext.Stamp stamp,rk.diary.PersonalHomeworkStore.Id id){if(!owners.current(stamp)||id==null||!stamp.owner.equals(id.owner))throw new IllegalStateException("Ученик изменился. Откройте урок заново");}
+    /** The student selected in the diary (as the app names it), or "" when none. */
+    public static String selectedStudent(){synchronized(owners){return owners.selectedStudent();}}
     public static String owner(){synchronized(owners){return owners.owner();}}
     public static boolean currentOwner(String owner){return owner!=null&&!owner.isEmpty()&&owner.equals(owner());}
     public static void sessionObserved(Object value){synchronized(owners){session=value;try{Object auth=value.getClass().getMethod("a").invoke(value);Object identity=value.getClass().getMethod("c").invoke(value);accountChanged(auth==null?null:identity);}catch(Exception e){accountChanged(null);log("Reading session owner",e);}}}
@@ -64,7 +66,7 @@ public final class ScheduleBridge {
     static Object field(Object o,String n)throws Exception{return o.getClass().getField(n).get(o);}
     static Object manager(String n)throws Exception{return Class.forName("c7.LessonCountdownManager").getField(n).get(null);}
     static void setManager(String n,Object v)throws Exception{Class.forName("c7.LessonCountdownManager").getField(n).set(null,v);}
-    public static void init(Context c){app=c.getApplicationContext();}
+    public static void init(Context c){app=c.getApplicationContext();rk.mcp.McpSettings.resume(app);}
     public static void attach(View view){if(view==null)return;app=view.getContext().getApplicationContext();root=new WeakReference<>(view);refresh();}
     public static Context context(){return app;}
     public static synchronized ScheduleStore store(Context c){if(store==null)store=ScheduleStore.load(c);return store;}
@@ -81,6 +83,8 @@ public final class ScheduleBridge {
     }
     private static int lessonMinute(Object lesson,String name)throws Exception{Date value=(Date)field(lesson,name);return value==null?-1:ScheduleResolver.minute(value);}
     public static List<ScheduleResolver.Event> diary(long day){return owners.get(day);}
+    /** Every diary day that was loaded for the open student (key YYYY-MM-DD), for the MCP server. */
+    public static Map<String,List<ScheduleResolver.Event>> loadedDays(){return owners.owner().isEmpty()?new HashMap<String,List<ScheduleResolver.Event>>():owners.snapshot();}
     public static int shift(Context c,long day){Integer v=store(c).corrections.get(ScheduleResolver.key(day));return v==null?0:v;}
     public static void clearShift(Context c){ScheduleStore next=store(c).copy();next.corrections.clear();next.save(c);store=next;c.getSharedPreferences("manual_bell_correction",0).edit().clear().apply();}
     public static void resetCorrection(Context c){try{clearShift(c);refresh();}catch(Exception e){Toast.makeText(c,e.getMessage(),Toast.LENGTH_LONG).show();}}

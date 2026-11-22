@@ -46,7 +46,7 @@
 .method constructor <init>(Landroid/widget/TextView;Ljava/lang/String;Ljava/lang/String;J)V
     .registers 7
 
-    .line 63
+    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "\u0418\u0437 \u0434\u043d\u0435\u0432\u043d\u0438\u043a\u0430"

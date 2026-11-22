@@ -43,6 +43,7 @@ The mod never republishes the base app. It ships its own classes and resources p
 | `MarkBadgeHelper` | Mark badges and styling |
 | `NetworkMonitor` | UI reaction to connectivity changes |
 | `OfflineManager` | Reuse of available local state while offline |
+| `rk.mcp.*` | Optional local MCP server for the devx assistant; see [MCP server](mcp.md) |
 
 The schedule system is implemented in plain Java in `mod/java/rk/schedule` (`ScheduleResolver`, `ScheduleStore`, `ScheduleBridge`, `ScheduleEditor`, `DiaryContext`) and compiled to Smali by `scripts/build-schedule.sh`. See [bell schedule v2](schedule.md) and [diary owner isolation](diary-isolation.md).
 
@@ -65,6 +66,8 @@ Mod classes are called from a small number of base-app components:
 | `DiaryFragment` | `GreetingManager.attachView(...)` | Attach greeting |
 | `DiaryFragment` | `LessonCountdownManager.attachView(...)` | Attach lesson timer |
 | Diary adapter | `PersonalHomeworkHelper.bind(...)` | Render personal homework |
+| `ThemeManager.showThemeCustomizerDialog` | `McpSettings.bind(...)` | Wire the MCP server switch |
+| `ScheduleBridge.init` | `McpSettings.resume(...)` | Restart a server that was left on |
 
 Base files are not included in the repository; the table above is the full contract.
 
